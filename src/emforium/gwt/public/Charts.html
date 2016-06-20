@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+  <head>
+  
+    <!-- Properties can be specified to influence deferred binding -->
+    <meta name='gwt:property' content='locale=en_UK'>
+ 
+    <!-- Titles are optional, but useful -->
+    <title>Wireframe Application</title>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>    
+<!--        <link rel="stylesheet" type="text/css" href="GWTFlow.css" />-->
+
+        <script type="text/javascript" src="prototype.js"></script>
+        <script type="text/javascript" src="effects.js"></script>
+
+  </head>
+  <body>
+   
+    <!-- The fully-qualified module name, followed by 'nocache.js' -->
+  <script type="text/javascript">
+  <!--
+  function helloWorld2(id,source, sourceElem, value) {
+      alert("helloworld2: "+value);
+  }
+  function gwtCallback(func,args) {
+	  //alert( func );
+	  var functionIdx = func.indexOf('function');
+	  if ( functionIdx == 0 ) {
+		  eval(func).apply(this,args);
+	  } else {
+	    if (func.indexOf('(') >= 0 ) {
+	        eval(func);
+	    } else {
+	        eval(func).apply(this,args);
+	    }
+	  }
+	}
+  function chartSingleSelect(id,source, sourceElem, arraySelected, value) {
+      alert("chartSingleSelect.1: "+id);
+      //alert("chartSingleSelect.2: "+arraySelected);
+      //alert("chartSingleSelect.3: "+value);
+      //alert("chartSingleSelect.4: "+value.row+", "+value.column);
+  }
+  function chartMultiSelect(id,source, sourceElem, arraySelected, value) {
+      alert("chartMultiSelect.1: "+id);
+      alert("chartMultiSelect.2: "+arraySelected);
+      alert("chartMultiSelect.3: "+value);
+  }
+  function cfCallback(id,source, sourceElem, value) {
+      //alert("cfCallback: "+id+", ["+value+"]");
+      var idx = gwtCoverFlowGetSelectedImage('f5');
+      //alert('selidx='+idx);
+      //var dd = document.getElementById("image-dd");
+      //dd.selectedIndex = value;
+      //alert"txtCallback1-1: "+source.@com.google.gwt.user.client.ui.TextArea::getText());
+      //gwtSetTextAreaValue("bar",value);
+      //source.@emforium.gwt.widget.custom.TextArea::setTextWithMaxLimitCheck(Ljava/lang/String;)("hello there");
+      //source.@com.google.gwt.user.client.ui.TextArea::setText(Ljava/lang/String;)("hello there");
+      //alert("txtCallback1-1: "+sourceElem.value);
+      /*
+      var elem = document.getElementById(id);
+      alert("txtCallback1 step1: "+elem);
+      alert("txtCallback1 step2: "+elem.innerText);
+      alert("txtCallback1 step3: "+elem.nodeName);
+      alert("txtCallback1: "+id+", ["+value+"]");
+      */
+  }
+  function txtCallback1x(id,source, sourceElem, value) {
+      alert("txtCallback1: "+id+", ["+value+"], "+sourceElem+", "+source);
+      alert("txtCallback1-1: "+sourceElem.value);
+      var elem = document.getElementById("foo");
+      alert("txtCallback1-2: "+elem.value);
+      var elem2 = document.getElementById("bar");
+      elem2.value = elem.value;
+      //alert("txtCallback1-1: "+sourceElem.value);
+      /*
+	  var elem = document.getElementById(id);
+	  alert("txtCallback1 step1: "+elem);
+	  alert("txtCallback1 step2: "+elem.innerText);
+	  alert("txtCallback1 step3: "+elem.nodeName);
+      alert("txtCallback1: "+id+", ["+value+"]");
+      */
+  }
+  function txtCallback1(id,source, sourceElem, value) {
+      //alert("txtCallback1: "+id+", ["+value+"], "+sourceElem+", "+source);
+      //alert"txtCallback1-1: "+source.@com.google.gwt.user.client.ui.TextArea::getText());
+      gwtSetTextAreaValue("bar",value);
+      //source.@emforium.gwt.widget.custom.TextArea::setTextWithMaxLimitCheck(Ljava/lang/String;)("hello there");
+      //source.@com.google.gwt.user.client.ui.TextArea::setText(Ljava/lang/String;)("hello there");
+      //alert("txtCallback1-1: "+sourceElem.value);
+      /*
+	  var elem = document.getElementById(id);
+	  alert("txtCallback1 step1: "+elem);
+	  alert("txtCallback1 step2: "+elem.innerText);
+	  alert("txtCallback1 step3: "+elem.nodeName);
+      alert("txtCallback1: "+id+", ["+value+"]");
+      */
+  }
+  function txtCallback2(id,source, sourceElem, value) {
+      alert("txtCallback2: "+id+", ["+value+"]");
+  }
+  function txtCallback3(id,source, sourceElem, value) {
+      alert("txtCallback3: "+id+", ["+value+"]");
+  }
+  function txtCallback4(id,source, sourceElem, value) {
+      alert("txtCallback4: "+id+", ["+value+"]");
+  }
+  // -->
+  </script>
+  <script language="javascript" src="emforium.gwt.WidgetFactory.nocache.js"></script>
+    
+    
+    <!-- Include a history iframe to enable full GWT history support -->
+    <!-- (the id must be exactly as shown)                           -->
+    <iframe src="javascript:''" id="__gwt_historyFrame" style="width:0;height:0;border:0"></iframe>
+    
+    <div>Loading.....</div>
+    
+<hr />
+
+<br/><br/><hr/><br/><br/>
+<span id="pieconf1" widget-type="chart.PieChartOptions" width="400" height="200" enable3D="true" title="My Daily Activities" 
+    backgroundColor="white" borderColor="black" focusBorderColor="none" legend="none" legendBackgroundColor="none" legendTextColor="none" 
+    titleColor="red" colors="none" legendPosition="none"> 
+</span>
+<span id="barconf1" widget-type="chart.BarChartOptions" width="400" height="200" enable3D="true" title="My Daily Activities" 
+    backgroundColor="white" borderColor="black" focusBorderColor="none" legend="none" legendBackgroundColor="none" legendTextColor="none" 
+    titleColor="red" colors="none" legendPosition="none"
+    axisBackgroundColor="none" axisColor="none" 
+    stacked="false"
+    > 
+</span>
+<span id="lineconf1" widget-type="chart.LineChartOptions" width="400" height="200" enable3D="true" title="My Daily Activities" 
+    backgroundColor="white" borderColor="black" focusBorderColor="none" legend="none" legendBackgroundColor="none" legendTextColor="none" 
+    titleColor="red" colors="none" legendPosition="none"
+    axisBackgroundColor="none" axisColor="none" 
+    smoothLine="true"
+    > 
+</span>
+<span id="columnconf1" widget-type="chart.ColumnChartOptions" width="400" height="200" enable3D="true" title="My Daily Activities" 
+    backgroundColor="white" borderColor="black" focusBorderColor="none" legend="none" legendBackgroundColor="none" legendTextColor="none" 
+    titleColor="red" colors="none" legendPosition="none"
+    axisBackgroundColor="none" axisColor="none" 
+    stacked="false"
+    > 
+</span>
+<span id="scatterconf1" widget-type="chart.ScatterChartOptions" width="400" height="200" enable3D="true" title="My Daily Activities" 
+    backgroundColor="white" borderColor="black" focusBorderColor="none" legend="none" legendBackgroundColor="none" legendTextColor="none" 
+    titleColor="red" colors="none" legendPosition="none"
+    axisBackgroundColor="none" axisColor="none" 
+    > 
+</span>
+<span id="areaconf1" widget-type="chart.AreaChartOptions" width="400" height="200" enable3D="true" title="My Daily Activities" 
+    backgroundColor="white" borderColor="black" focusBorderColor="none" legend="none" legendBackgroundColor="none" legendTextColor="none" 
+    titleColor="red" colors="none" legendPosition="none"
+    axisBackgroundColor="none" axisColor="none" 
+    stacked="false"
+    > 
+</span>
+<span id="tlconf1" widget-type="chart.AnnotatedTimeLineOptions" width="600" height="400" displayAnnotations="true"> 
+</span>
+<span id="orgconf1" widget-type="chart.OrgChartOptions" size="medium" allowHtml="false"> 
+</span>
+<span id="tableconf1" widget-type="chart.TableOptions" allowHtml="true" showRowNumber="true" pageSize="2" pagePolicy="none" sortPolicy="none">
+</span>
+<span id="motionconf1" widget-type="chart.MotionChartOptions" width="400" height="300"> 
+</span>
+<span id="motiondata1" widget-type="chart.Data">
+<data>
+<column type="string" title="Fruit"> </column>
+<column type="date" title="Date"> </column>
+<column type="number" title="Sales"> </column>
+<column type="number" title="Expenses"> </column>
+<column type="string" title="Location"> </column>
+<row>
+<cell value="Apples"> </cell>
+<cell value="1998-1-2"> </cell>
+<cell value="1000"> </cell>
+<cell value="300"> </cell>
+<cell value="East"> </cell>
+</row>
+<row>
+<cell value="Oranges"> </cell>
+<cell value="1998-1-2"> </cell>
+<cell value="950"> </cell>
+<cell value="200"> </cell>
+<cell value="West"> </cell>
+</row>
+<row>
+<cell value="Bananas"> </cell>
+<cell value="1998-1-2"> </cell>
+<cell value="300"> </cell>
+<cell value="250"> </cell>
+<cell value="West"> </cell>
+</row>
+<row>
+<cell value="Apples"> </cell>
+<cell value="1998-1-2"> </cell>
+<cell value="788"> </cell>
+<cell value="617"> </cell>
+<cell value="West"> </cell>
+</row>
+</data>
+</span>
+<span id="orgdata1" widget-type="chart.Data">
+<data>
+<column type="string" title="From"> </column>
+<column type="string" title="To"> </column>
+<column type="string" title="Tooltip"> </column>
+<row>
+<cell value="User A"> </cell>
+<cell> </cell>
+<cell value="User with relationship"> </cell>
+</row>
+<row>
+<cell value="User B"> </cell>
+<cell value="User A"> </cell>
+<cell value="Friend"> </cell>
+</row>
+<row>
+<cell value="User C"> </cell>
+<cell value="User A"> </cell>
+<cell value="Coworker"> </cell>
+</row>
+<row>
+<cell value="User D"> </cell>
+<cell value="User A"> </cell>
+<cell value="Coworker"> </cell>
+</row>
+</data>
+</span>
+<span id="chartdata1" widget-type="chart.Data">
+<data>
+<column type="string" title="Task"> </column>
+<column type="number" title="Hours per Day"> </column>
+<row>
+<cell value="Work"> </cell>
+<cell value="11"> </cell>
+</row>
+<row>
+<cell value="Eat"> </cell>
+<cell value="2"> </cell>
+</row>
+<row>
+<cell value="Commute"> </cell>
+<cell value="2"> </cell>
+</row>
+<row>
+<cell value="Watch TV"> </cell>
+<cell value="2"> </cell>
+</row>
+<row>
+<cell value="Sleep"> </cell>
+<cell value="7"> </cell>
+</row>
+</data>
+</span>
+<span id="tldata1" widget-type="chart.Data">
+<data>
+<column type="date" title="Date"> </column>
+<column type="number" title="Sold Pencils"> </column>
+<column type="string" title="title1"> </column>
+<column type="string" title="text1"> </column>
+<column type="number" title="Sold Pens"> </column>
+<column type="string" title="title2"> </column>
+<column type="string" title="text2"> </column>
+<row>
+	<cell value="2008-1-1"> </cell>
+	<cell value="30000"> </cell>
+	<cell> </cell>
+	<cell> </cell>
+	<cell value="40645"> </cell>
+	<cell> </cell>
+	<cell> </cell>
+</row>
+<row>
+    <cell value="2008-1-2"> </cell>
+    <cell value="14045"> </cell>
+    <cell> </cell>
+    <cell> </cell>
+    <cell value="20374"> </cell>
+    <cell> </cell>
+    <cell> </cell>
+</row>
+<row>
+    <cell value="2008-1-3"> </cell>
+    <cell value="55022"> </cell>
+    <cell> </cell>
+    <cell> </cell>
+    <cell value="50766"> </cell>
+    <cell> </cell>
+    <cell> </cell>
+</row>
+<row>
+    <cell value="2008-1-4"> </cell>
+    <cell value="75284"> </cell>
+    <cell> </cell>
+    <cell> </cell>
+    <cell value="14334"> </cell>
+    <cell value="Out of Stock"> </cell>
+    <cell value="Ran out of stock on pens at 4pm"> </cell>
+</row>
+<row>
+    <cell value="2008-1-5"> </cell>
+    <cell value="41476"> </cell>
+    <cell value="Bought Pens"> </cell>
+    <cell value="Bought 200k pens"> </cell>
+    <cell value="66467"> </cell>
+    <cell> </cell>
+    <cell> </cell>
+</row>
+<row>
+    <cell value="2008-1-6"> </cell>
+    <cell value="33322"> </cell>
+    <cell> </cell>
+    <cell> </cell>
+    <cell value="39463"> </cell>
+    <cell> </cell>
+    <cell> </cell>
+</row>
+</data>
+</span>
+<span id="pie1" widget-type="chart.Chart" configId="pieconf1" dataId="chartdata1" onSingleSelect="chartSingleSelect" onMultipleSelect="chartMultiSelect">
+</span>
+<span id="bar1" widget-type="chart.Chart" configId="barconf1" dataId="chartdata1" onSingleSelect="chartSingleSelect" onMultipleSelect="chartMultiSelect">
+</span>
+<span id="line1" widget-type="chart.Chart" configId="lineconf1" dataId="chartdata1" onSingleSelect="chartSingleSelect" onMultipleSelect="chartMultiSelect">
+</span>
+<span id="column1" widget-type="chart.Chart" configId="columnconf1" dataId="chartdata1" onSingleSelect="chartSingleSelect" onMultipleSelect="chartMultiSelect">
+</span>
+<span id="scatter1" widget-type="chart.Chart" configId="scatterconf1" dataId="chartdata1" onSingleSelect="chartSingleSelect" onMultipleSelect="chartMultiSelect">
+</span>
+<span id="area1" widget-type="chart.Chart" configId="areaconf1" dataId="chartdata1" onSingleSelect="chartSingleSelect" onMultipleSelect="chartMultiSelect">
+</span>
+<span id="org1" widget-type="chart.Chart" configId="orgconf1" dataId="orgdata1" onSingleSelect="chartSingleSelect" onMultipleSelect="chartMultiSelect">
+</span>
+<span id="motion1" widget-type="chart.Chart" configId="motionconf1" dataId="motiondata1" onSingleSelect="chartSingleSelect" onMultipleSelect="chartMultiSelect">
+</span>
+<span id="tl1" widget-type="chart.Chart" configId="tlconf1" dataId="tldata1" onSingleSelect="chartSingleSelect" onMultipleSelect="chartMultiSelect">
+</span>
+<span id="table1" widget-type="chart.Chart" configId="tableconf1" dataId="chartdata1" onSingleSelect="chartSingleSelect" onMultipleSelect="chartMultiSelect">
+</span>
+<!-- 
+<table width="100%" border="2">
+   <tr>
+   <td class="label label100">Description</td>
+   <td colspan="3" class="field"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td width="1%">
+<table class="textAreaTable">
+   <tr>
+   	<td>
+   	<span widget-type="custom.TextArea" widgetId="foo" class="textAreaBox dojo-ResizableTextArea" name="description" characterWidth="67" visibleLines="4" remainingNotifId="gw1" maxLength="255" id="gwl4" tabindex="12">
+   	<textarea  cols="67" rows="4"></textarea>
+   	</span>
+   	</td>
+   </tr>
+   <tr><td align="right"><span class="textAreaRemaining">Remaining Characters&nbsp;<span id="gw1">255</span></span></td></tr>
+</table>
+   </td><td width="99%"></td></tr></table></td>
+
+  </tr>
+  <tr>
+   <td class="label label100">Appraisal Desc.</td>
+   <td colspan="3" class="field"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td width="1%"><table class="textAreaTable"><tr><td><span widget-type="custom.TextArea"  widgetId="bar" class="textAreaBox dojo-ResizableTextArea" name="appraisalDescription" characterWidth="67" visibleLines="4" remainingNotifId="gw2" maxLength="4000" id="gwl5" tabindex="13"><textarea  cols="67" rows="4"></textarea></span></td></tr><tr><td align="right"><span class="textAreaRemaining">Remaining Characters&nbsp;<span id="gw2">4000</span></span></td></tr></table></td><td width="99%"></td></tr></table></td>
+  </tr>
+</table>
+<br/><br/><hr/><br/><br/>
+ -->
+ 
+<span id="evt1"  widget-type="custom.EventCallback" sync="false" sourceId="gwl4" event="change" jsCallback="txtCallback1"> </span>
+<span id="evt2"  widget-type="custom.EventCallback" sync="false" sourceId="gwl5" event="change" jsCallback="txtCallback2"> </span>
+<span id="evt3"  widget-type="custom.EventCallback" sync="false" sourceId="gwl4" event="change" jsCallback="txtCallback3"> </span>
+<span id="evt4"  widget-type="custom.EventCallback" sync="false" sourceId="gwl5" event="change" jsCallback="txtCallback4"> </span>
+<span id="evt-cfx"  widget-type="custom.EventCallback" sync="false" sourceId="f5" event="change" jsCallback="function(id,source, sourceElem, value) { alert('hello there'); }"> </span>
+<span id="evt-cf2"  widget-type="custom.EventCallback" sync="false" sourceId="f5" event="change" jsCallback="function(id,source, sourceElem, value) { alert('hello there'); }"> </span>
+<span id="evt-cf"  widget-type="custom.EventCallback" sync="false" sourceId="f5" event="change" 
+	jsCallback="document.getElementById('image-dd').selectedIndex = gwtCoverFlowGetSelectedImage('f5')"> </span>
+<div id="gwteventids" list=""></div>
+<div id="gwtfieldids2" list="pieconf1,barconf1,lineconf1,chartdata1,pie1,bar1,line1"></div>
+<div id="gwtfieldids4" list="barconf1,chartdata1,bar1"></div>
+<div id="gwtfieldidsx" list="pieconf1,barconf1,lineconf1,columnconf1,chartdata1,pie1,bar1,line1,column1"></div>
+<div id="gwtfieldids" list="pieconf1,barconf1,lineconf1,columnconf1,scatterconf1,areaconf1,orgconf1,motionconf1,tlconf1,tableconf1,tldata1,tl1,motiondata1,chartdata1,orgdata1,pie1,bar1,line1,column1,scatter1,area1,org1,motion1,table1"></div>
+<div id="gwtfieldidsy" list="tlconf1,tldata1,tl1"></div>
+<div id="gwtnodeids" list=""></div>
+<!--<div id="gwtfieldids" list="gwl13,gwl14,gwl15,f6,f5"></div>-->
+<!--<div id="gwtnodeids" list="gw16,gw17"></div>-->
+  </body>
+ </html>
+ 

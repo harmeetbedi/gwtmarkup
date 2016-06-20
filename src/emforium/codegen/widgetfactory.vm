@@ -1,0 +1,150 @@
+// generated file. template : widgetfactory.vm
+
+package $class.getPackageName();
+
+#if ( !$class.isAbstract() || $class.getAttributes().size() > 0 )
+#if ( $class.getLeafName() != "UIObject" )
+import $class.getClassName();
+#end
+import com.google.gwt.user.client.ui.UIObject;
+#end
+#if ( !$class.isAbstract() )
+import emforium.gwt.widget.WidgetDOMConverter;
+import com.google.gwt.user.client.ui.Widget;
+#end
+#if ( $class.getParentLeafName() == "Layout" ) 
+import emforium.gwt.widget.LayoutFactory;
+#elseif ( $class.getParentLeafName() == "RefDataClass" ) 
+import emforium.gwt.widget.RefDataClassFactory;
+#else
+#if (  $class.getParentClassName().startsWith("com.google.gwt.user.client") )
+import emforium.gwt.widget.gwt.${class.getParentLeafName()}Factory;
+#end
+#end
+#if ( !$class.isAbstract()  || $class.getAttributes().size() > 0 )
+import com.google.gwt.user.client.Element;
+#if ( $class.getAttributes().size() > 0 )
+import emforium.gwt.widget.AttributeSetter.*;
+#end
+#end
+#if ( $class.getWidgetAddMethods().size() > 0 )
+import emforium.gwt.util.GwtXMLHelper;
+#end
+#if ( $class.getLeafName() == "LayoutContainer" )
+import com.extjs.gxt.ui.client.widget.Layout;
+#end
+
+#if ( $class.isExtendsGeneric() )
+    #set ($clsName = "${class.getLeafName()}Factory<T extends ${class.getLeafName()}>")
+    #set ($parentClsName = "${class.getParentLeafName()}Factory<T>")
+#elseif ( $class.isGeneric() )
+    #set ($clsName = "${class.getLeafName()}Factory")
+    #set ($parentClsName = "${class.getParentLeafName()}Factory<${class.getLeafName()}>")
+#else
+    #set ($clsName = "${class.getLeafName()}Factory")
+    #set ($parentClsName = "${class.getParentLeafName()}Factory")
+#end
+#set ($clsName = "${class.getLeafName()}Factory")
+#set ($parentClsName = "${class.getParentLeafName()}Factory")
+#if ( $class.getLeafName() == "UIObject" )
+#set ($clsName = "${class.getLeafName()}Factory<W extends UIObject>")
+#set ($parentClsName = "emforium.gwt.widget.GwtObjectFactory<W>")
+#end
+#if ( $class.getParentLeafName() == "UIObject" )
+#set ($clsName = "${class.getLeafName()}Factory")
+#set ($parentClsName = "${class.getParentLeafName()}Factory<$class.getLeafName()>")
+#end
+#if ( $class.getParentLeafName() == "Layout" )
+#set ($clsName = "${class.getLeafName()}Factory")
+#set ($parentClsName = "${class.getParentLeafName()}Factory<$class.getLeafName()>")
+#end
+
+public #if ($class.isAbstract() ) abstract #end class $clsName extends $parentClsName {
+    /** tag used in XML file to lookup factory */
+    public static final String XML_TAG = "$class.getLeafName()";
+    
+    public ${class.getLeafName()}Factory() {
+    }
+
+    @SuppressWarnings("unchecked")
+    protected void registerAttributes() {
+        super.registerAttributes();
+#foreach( $attr in $class.getAttributes() )
+        register("$attr.getAttributeName()", new ${attr.getType().getObjectType()}AttributeSetter<$class.getLeafName()>() {
+            public void set($class.getLeafName() widget, Element element, String name, ${attr.getType().getPrimitiveType()} value) {
+                widget.${attr.getMethodName()}(value);
+            }
+        });
+#end
+    }
+
+#if ( ( !$class.isAbstract() && !$class.isNewInstancePossible() ) || $class.isNewInstancePossible() )
+#if ( !$class.isAbstract() && !$class.isNewInstancePossible() )
+    /** override to create instance with arguments */
+    @Override
+    protected $class.getLeafName() newInstance(Element element) {
+        throw new RuntimeException("override to create instance with arguments");
+    }
+#else
+    @Override
+    protected $class.getLeafName() newInstance(Element element) {
+        return new ${class.getLeafName()}();
+    }
+#end
+    
+    public $class.getLeafName() create(java.util.List<Object> ancestors,final Element element) {
+        final $class.getLeafName() item = ($class.getLeafName())createInstance(element);
+        new WidgetDOMConverter<$class.getLeafName()>(ancestors,item,element) {
+            @Override
+            protected void addUIObject(UIObject widget) {
+#if ( $class.getWidgetAddMethods().size() > 0 )
+                String function = GwtXMLHelper.getAttribute(element,emforium.gwt.widget.MarkupConstants.CHILDTYPE_XML_ATTRIBUTE_NAME);
+                String setFunc = "set"+function;
+                String addFunc = "add"+function;
+#set( $addElseIf = false )
+#foreach( $attr in $class.getWidgetAddMethods() )
+#set ( $attrCls = $attr.getClassName() )
+#if ( $class.getLeafName().equals("RadioGroupFactory") && $attrCls.equals("com.extjs.gxt.ui.client.widget.form.Field") )
+#set ( $attrCls = "com.extjs.gxt.ui.client.widget.form.Radio" )
+#end
+#if ( $class.getLeafName().equals("CheckBoxGroupFactory") && $attrCls.equals("com.extjs.gxt.ui.client.widget.form.Field") )
+#set ( $attrCls = "com.extjs.gxt.ui.client.widget.form.CheckBox" )
+#end
+#if ( !$attr.isDefaultMapping() )
+#if( $addElseIf )
+                else 
+#end 
+#if ( $attr.getMethodName().startsWith("set" ) )
+                if ( widget instanceof $attrCls && "$attr.getMethodName()".equalsIgnoreCase(setFunc) )
+                    item.$attr.getMethodName()(($attrCls)widget);
+#elseif ( $attr.getMethodName().startsWith("add" ) )
+                if ( widget instanceof $attrCls && "$attr.getMethodName()".equalsIgnoreCase(addFunc) )
+                    item.$attr.getMethodName()(($attrCls)widget);
+#end
+#set( $addElseIf = true )
+#end
+#end
+#foreach( $attr in $class.getWidgetAddMethods() )
+#set ( $attrCls = $attr.getClassName() )
+#if ( $class.getLeafName().equals("RadioGroup") && $attrCls.equals("com.extjs.gxt.ui.client.widget.form.Field") )
+#set ( $attrCls = "com.extjs.gxt.ui.client.widget.form.Radio" )
+#end
+#if ( $class.getLeafName().equals("CheckBoxGroup") && $attrCls.equals("com.extjs.gxt.ui.client.widget.form.Field") )
+#set ( $attrCls = "com.extjs.gxt.ui.client.widget.form.CheckBox" )
+#end
+#if ( $attr.isDefaultMapping() )
+#if( $addElseIf )
+                else 
+#end 
+                if ( widget instanceof $attrCls )
+                    item.$attr.getMethodName()(($attrCls)widget);
+#set( $addElseIf = true )
+#end
+#end
+#end
+            }
+        };
+        return item;
+    }
+#end
+}

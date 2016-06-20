@@ -1,0 +1,102 @@
+<project default="rebuild" basedir=".">
+  
+ <!-- set global properties for this build -->
+ <property name="GWT_HOME" value="../../lib/gwt"/>
+ <property name="src" value="src"/>
+ <property name="testreports" value="testreports"/>
+ <property name="build" value="build/classes"/>
+ <property name="lib" value="lib"/>
+
+    <target name="classpath">
+        <path id="local.class.path">
+            <fileset dir="${lib}" includes="*.jar"/>
+	    <pathelement location="${build}"/>
+            <pathelement location="${src}"/>
+        </path>
+        <path id="local.lib">
+            <fileset dir="${lib}" includes="*.jar"/>
+        </path>
+    </target>
+
+    <target name="dist" depends="compile">
+        <jar jarfile="build.jar" destfile="${user.dir}/build/emfapp.jar" basedir="${build}" includes="**/*.class,**/*.properties,**/*.xml"/>
+    </target>
+
+ <target name="compile" depends="classpath">
+    <mkdir dir="${build}"/>
+   <javac destdir="${build}" debug="on" nowarn="on">
+            <classpath>
+                <path refid="local.class.path"/>
+            </classpath>
+            <src path="${src}"/>
+   </javac>
+ </target>
+
+	 <target name="compile.bootstrap" depends="classpath">
+	    <mkdir dir="${build}"/>
+	   <!-- Compile the java code from ${src} into ${build} -->
+	   <javac destdir="${build}" debug="on" nowarn="on">
+	            <classpath>
+	                <path refid="local.class.path"/>
+	            </classpath>
+	            <src path="${src}/emforium/codegen"/>
+	            <src path="${src}/emforium/util"/>
+	   </javac>
+	 </target>
+
+  <target name="clean">
+    <delete dir="${build}" includes="**/*.class"/>
+ </target>
+ 
+     <target name="gen.gxt">
+        <mkdir dir="${src}/emforium/gwt/widget/gxt"/>
+        <java classname="emforium.codegen.WidgetFactoryGenerator">
+                <classpath>
+                    <path refid="local.class.path"/>
+                </classpath>
+             <arg value="src"/>
+            <arg value="emforium.gwt.widget.gxt"/>
+             <arg value="lib/gxt.jar"/>
+         </java>
+     </target>
+
+    <target name="gen.smartgwt" depends="compile">
+       <mkdir dir="${src}/emforium/gwt/widget/smartgwt"/>
+       <java classname="emforium.codegen.WidgetFactoryGenerator">
+               <classpath>
+                   <path refid="local.class.path"/>
+               </classpath>
+            <arg value="src"/>
+           <arg value="emforium.gwt.widget.smartgwt"/>
+            <arg value="lib/smartgwt.jar"/>
+        </java>
+    </target>
+
+    <target name="gen.tatami" depends="compile">
+       <mkdir dir="${src}/emforium/gwt/widget/tatami"/>
+       <java classname="emforium.codegen.WidgetFactoryGenerator">
+               <classpath>
+                   <path refid="local.class.path"/>
+               </classpath>
+            <arg value="src"/>
+           <arg value="emforium.gwt.widget.tatami"/>
+            <arg value="lib/tatami.jar"/>
+        </java>
+    </target>
+
+    <target name="gen.gwt">
+       <mkdir dir="${src}/emforium/gwt/widget/gwt"/>
+       <java classname="emforium.codegen.WidgetFactoryGenerator">
+               <classpath>
+                   <path refid="local.class.path"/>
+               </classpath>
+            <arg value="src"/>
+           <arg value="emforium.gwt.widget.gwt"/>
+            <arg value="lib/gwt-user.jar"/>
+        </java>
+    </target>
+
+<target name="rebuild" depends="clean,compile"/>
+
+</project>
+

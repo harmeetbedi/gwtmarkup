@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+  <head>
+  
+    <!-- Properties can be specified to influence deferred binding -->
+    <meta name='gwt:property' content='locale=en_UK'>
+ 
+    <!-- Titles are optional, but useful -->
+    <title>Wireframe Application</title>
+    
+  </head>
+  <body>
+   
+    <!-- The fully-qualified module name, followed by 'nocache.js' -->
+    <script language="javascript" src="emforium.gwt.WidgetFactory.nocache.js"></script>
+    
+    
+    <!-- Include a history iframe to enable full GWT history support -->
+    <!-- (the id must be exactly as shown)                           -->
+    <iframe src="javascript:''" id="__gwt_historyFrame" style="width:0;height:0;border:0"></iframe>
+    
+    <div>Loading.....</div>
+    
+<hr />
+
+<h2>List Item Test (revised HTML layout)</h2>
+<gwtfield id="f4" widget-type="gwt.TextArea">
+</gwtfield>
+<br/><br/><hr/><br/><br/>
+<gwtfield id="f5" widget-type="custom.ClientGrid" grid-width="600" page-size="5" grid-height="0" scroll-mode="auto">
+<rows>
+    <column field="id" display="Id" type="String" relative-width="10" hidden="true"></column>
+    <column field="sender" display="Sender" type="String" relative-width="10" hidden="false"></column>
+    <column field="email" display="Email" type="String" relative-width="10" hidden="false"></column>
+    <column field="phone" display="Phone" type="String" relative-width="10" hidden="false" auto-expand="true"></column>
+    <column field="state" display="State" type="String" relative-width="10" hidden="false"></column>
+    <column field="zip" display="Zip Code" type="String" relative-width="10" hidden="false"></column>
+    <column field="fld_text" display="fld_text" type="String" relative-width="10" hidden="false" editor-type="text"></column>
+<!--    <column field="fld_date" display="fld_date" type="String" relative-width="10" hidden="false" editor-type="date"></column>-->
+<!--    <column field="fld_currency" display="fld_currency" type="String" relative-width="10" hidden="false" editor-type="currency"></column>-->
+<!--    <column field="fld_numeric" display="fld_numeric" type="String" relative-width="10" hidden="false" editor-type="numeric"></column>-->
+<!--    <column field="test" display="Test" type="String" relative-width="10" hidden="false"></column>-->
+    <row>
+        <cell name="id" value="id#42"></cell>
+        <cell name="sender" value="zMiddleton, Wendy VA"></cell>
+        <cell name="email" value="Amorbi.tristique@iaculisquis.org"></cell>
+        <cell name="phone" value="5574291911"></cell>
+        <cell name="state" value="TX"></cell>
+        <cell name="zip" value="51334"></cell>
+        <cell name="fld_text" value=""></cell>
+<!--        <cell name="fld_date" value="Jan 22 2008"></cell>-->
+<!--        <cell name="fld_currency" value=""></cell>-->
+<!--        <cell name="fld_numeric" value="3.33"></cell>-->
+<!--        <cell name="test" value="test"></cell>-->
+    </row>
+</rows>
+</gwtfield>
+<!-- 
+<span id="test2">
+<rows>
+    <row>
+        <Sender>Middleton, Wendy VA.</sender>
+        <Email>Amorbi.tristique@iaculisquis.org</Email>
+        <Phone>5574291911</Phone>
+        <State>TX</State>
+        <Zip>51334</Zip>
+    </row>
+</rows>
+</span>
+ -->
+ 
+<div id="gwtfieldids" list="f4"></div>
+  </body>
+ </html>
+ 

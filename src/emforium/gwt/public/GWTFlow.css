@@ -1,0 +1,172 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+body {
+    background-color: #000000;
+}  
+
+a {
+    color: #7D1013;
+    text-decoration: none;
+}
+
+.loginWindow {
+    text-align: center;
+    background-color: #FFFFFF;
+    color: #000000;
+    width: 480px;
+    height: 320px;
+    
+    margin-left: -240px; /*half of width*/
+    margin-top: -160px; /*half of height*/
+
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    /*border: 1px solid #ccc;*/
+}
+
+.topPanel {
+    background: url('img/gwtflow-topbar.jpg') repeat-x top center;
+    width: 480px;
+    height: 60px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+}
+
+.bottomPanel {
+    width: 480px;
+    height: 60px;
+    padding: 10px 10px 10px 10px;
+}
+
+.mainPanel { 
+    height: 260px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.servicePanel {
+    width: 240px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-right: 0px;
+    padding-left: 20px;
+}
+
+.userPanel {
+    width: 220px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+}
+
+.albumPanel {
+    width: 480px;
+    padding-left: 10px;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    padding-right: 0px;
+}
+
+.scrollPanel { 
+    height: 197px;
+    width: 450px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}
+
+.userTextbox {
+    font-size: 16px;
+}
+
+.albumButton { 
+/*  width: 160px;
+    height:70px; */
+    font-size: 16px;
+    margin-top: 30px;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+}
+
+.rowColor1 { 
+    background-color:#CCCCCC; 
+}
+
+.rowColor2 { 
+    background-color:#E3E3E3;
+}
+
+.aboutText {
+    font-size:12px;
+}
+
+.demoText {
+    font-size:26px;
+    font-weight: bold;
+    color: #CC6600;
+}
+
+.images {
+    text-align: center;
+}
+
+#logo {
+    float:left;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+
+#header {
+    position:absolute;
+    top: 0px;
+    width:100%;
+    background-color:#404040;
+    padding-top: 5px;
+    padding-bottom: 2px;
+}
+
+#header p {
+    color: #FFFFFF;
+    text-align: right;
+    font-size: 12px;
+    padding-right: 10px;
+}
+/*
+#header a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 12px;
+}*/
+
+
+#footer {
+    position:absolute;
+    bottom: 10px;
+    padding-top: 10px;
+    width:100%;
+}
+
+#footer p {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 12px;
+}
+
+a.blind, a.blind:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+a.tblind, a.tblind:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 12px;
+}

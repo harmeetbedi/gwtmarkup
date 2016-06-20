@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+  <head>
+  
+    <!-- Properties can be specified to influence deferred binding -->
+    <meta name='gwt:property' content='locale=en_UK'>
+ 
+    <!-- Titles are optional, but useful -->
+    <title>Wireframe Application</title>
+    
+  </head>
+  <body>
+    <script language="javascript" src="js/ruzeeborders.js"></script>
+
+   
+    <!-- The fully-qualified module name, followed by 'nocache.js' -->
+    <script language="javascript" src="emforium.gwt.WidgetFactory.nocache.js"></script>
+    
+    
+    <!-- Include a history iframe to enable full GWT history support -->
+    <!-- (the id must be exactly as shown)                           -->
+    <iframe src="javascript:''" id="__gwt_historyFrame" style="width:0;height:0;border:0"></iframe>
+    
+    <div>Loading.....</div>
+<table cellpadding="4" cellspacing="4" border="0" width="100%">
+<tr>
+<td valign="top">Text field</td><td valign="top">&nbsp;:&nbsp;</td>
+<td valign="top">    
+    <div gwt-type="textfield" password="true"  maxLength="12"></div>
+</td>
+</tr>    
+<tr>
+<td valign="top">Portal Split</td><td valign="top">&nbsp;:&nbsp;</td>
+<td valign="top">    
+    <div gwt-type="HorizontalSplitPanel" splitPosition="30%" gwt-children-type="gwt" width="100%" height="100px">
+       <div gwt-type="portlet" gwt-children-type="html" headerVisible="true" heading="portlet" collapsible="true" expanded="true">
+           <h3>heading 1</h3>
+           <ul>item1 1</ul>
+           <ul>item2 1</ul>
+           <ul>item3 1</ul>
+        </div>
+       <div gwt-type="portlet" gwt-children-type="html" headerVisible="true" heading="portlet 2" collapsible="true" expanded="true">
+           <h3>heading p2</h3>
+           <ul>item1 p2</ul>
+           <ul>item2 p2</ul>
+           <ul>item3 p2</ul>
+        </div>
+    </div>
+</td>
+</tr>
+<tr>
+<td valign="top">Portal Split 2</td><td valign="top">&nbsp;:&nbsp;</td>
+<td valign="top">    
+    <div gwt-type="LayoutContainer" gwt-children-type="gwt" width="100%" height="300">
+      <div gwt-type="BorderLayout" gwt-children-type="none"></div>
+       <div gwt-type="BorderLayoutData" gwt-children-type="none" region="west" collapsible="true" margins="1"></div>
+       <div gwt-type="ContentPanel" gwt-children-type="gwt">
+           <div gwt-type="portlet" gwt-children-type="html" headerVisible="true" heading="portlet A" collapsible="true" expanded="true">
+               <h3>heading 1</h3>
+               <ul>item1 1</ul>
+               <ul>item2 1</ul>
+               <ul>item3 1</ul>
+            </div>
+        </div>
+       <div gwt-type="BorderLayoutData" gwt-children-type="none" region="center"></div>
+       <div gwt-type="ContentPanel" gwt-children-type="gwt" width="100%">
+            <div gwt-type="portal" gwt-children-type="gwt" columnWidths=".5,.5">
+               <div gwt-type="portlet" gwt-children-type="html" headerVisible="true" heading="portlet" collapsible="true" expanded="true">
+                   <h3>heading 1</h3>
+                   <ul>item1 1</ul>
+                   <ul>item2 1</ul>
+                   <ul>item3 1</ul>
+                </div>
+               <div gwt-type="portlet" gwt-children-type="html" headerVisible="true" heading="portlet 2" collapsible="true" expanded="true">
+                   <h3>heading p2</h3>
+                   <ul>item1 p2</ul>
+                   <ul>item2 p2</ul>
+                   <ul>item3 p2</ul>
+                </div>
+               <div gwt-type="portlet" gwt-children-type="html" headerVisible="true" heading="portlet 3" collapsible="true" expanded="true">
+                   <h3>heading p3</h3>
+                   <ul>item1 p3</ul>
+                   <ul>item2 p3</ul>
+                   <ul>item3 p3</ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</td>
+</tr>
+<tr>
+<td valign="top">Border Layout</td><td valign="top">&nbsp;:&nbsp;</td>
+<td valign="top">    
+    <div gwt-type="LayoutContainer" gwt-children-type="gwt" width="100%" height="100">
+        <div gwt-type="BorderLayout" gwt-children-type="gwt"></div>
+           <div gwt-type="BorderLayoutData" gwt-children-type="none" region="west" collapsible="true" margins="1"></div>
+            <div gwt-type="ContentPanel" gwt-children-type="gwt">
+                <div gwt-type="textfield" password="true"  maxLength="12"></div>
+            </div>
+           <div gwt-type="BorderLayoutData" gwt-children-type="none" region="center" margins="1"></div>
+            <div gwt-type="ContentPanel" gwt-children-type="gwt">
+                <div gwt-type="textfield" password="true"  maxLength="12"></div>
+            </div>
+    </div>
+</td>
+</tr>    
+<tr>
+<td valign="top">Portal</td><td valign="top">&nbsp;:&nbsp;</td>
+<td valign="top">    
+    <div gwt-type="portal" gwt-children-type="gwt" columnWidths=".5,.5">
+       <div gwt-type="portlet" gwt-children-type="html" headerVisible="true" heading="portlet" collapsible="true" expanded="true">
+           <h3>heading 1</h3>
+           <ul>item1 1</ul>
+           <ul>item2 1</ul>
+           <ul>item3 1</ul>
+        </div>
+       <div gwt-type="portlet" gwt-children-type="html" headerVisible="true" heading="portlet 2" collapsible="true" expanded="true">
+           <h3>heading p2</h3>
+           <ul>item1 p2</ul>
+           <ul>item2 p2</ul>
+           <ul>item3 p2</ul>
+        </div>
+       <div gwt-type="portlet" gwt-children-type="html" headerVisible="true" heading="portlet 3" collapsible="true" expanded="true">
+           <h3>heading p3</h3>
+           <ul>item1 p3</ul>
+           <ul>item2 p3</ul>
+           <ul>item3 p3</ul>
+        </div>
+    </div>
+</td>
+</tr>    
+<tr>
+<td valign="top">Accordian</td><td valign="top">&nbsp;:&nbsp;</td>
+<td valign="top">    
+     <div gwt-type="layoutcontainer" gwt-children-type="gwt" width="400" height="200" borders="true">
+        <div gwt-type="accordionlayout"></div>
+        <div gwt-type="contentpanel" heading="accordian tab1" gwt-children-type="gwt" collapsible="true" expanded="true">
+            <div gwt-type="portlet" headerVisible="true" heading="portlet" collapsible="true" expanded="true">
+                <h3>heading 1</h3>
+                <ul>item1 1</ul>
+                <ul>item2 1</ul>
+                <ul>item3 1</ul>
+             </div>
+        </div>
+        <div gwt-type="contentpanel" heading="accordian tab2" gwt-children-type="html" collapsible="true" expanded="true">
+                <h3>heading 2</h3>
+                <ul>item1 2</ul>
+                <ul>item2 2</ul>
+                <ul>item3 2</ul>
+        </div>
+    </div>
+</td>
+</tr>    
+<tr>
+<td valign="top">ContentPanel</td><td valign="top">&nbsp;:&nbsp;</td>
+<td valign="top">    
+    <div gwt-type="contentPanel">
+        this is some text
+    </div>
+</td>
+</tr>    
+<tr>
+<td valign="top">Portlet</td><td valign="top">&nbsp;:&nbsp;</td>
+<td valign="top">    
+    <div gwt-type="portlet" heading="portlet test" collapsible="true" headerVisible="true" expanded="true">
+        <h3>heading</h3>
+        <ul>item1</ul>
+        <ul>item2</ul>
+        <ul>item3</ul>
+    </div>
+</td>
+</tr>    
+<tr>
+<td valign="top">Menu</td><td valign="top">&nbsp;:&nbsp;</td>
+<td valign="top">    
+    <div gwt-type="toolbar">
+        <div gwt-type="texttoolitem" text="Home"  iconstyle="homeIcon" tooltip="Takes you to home">
+        <div gwt-type="menu">
+         <div gwt-type="menuitem" text="My Profile" url="?nav=profile"></div>
+         <div gwt-type="menuitem" text="Data Model" url="?nav=datamodel"></div>
+        </div>
+        </div>
+        <div gwt-type="texttoolitem" text="Order"  iconstyle="orderIcon" tooltip="Create and Find orders">
+        <div gwt-type="menu">
+         <div gwt-type="menuitem" text="Find" url="?nav=datamodel"></div>
+         <div gwt-type="menuitem" text="Create" url="?nav=datamodel"></div>
+         <div gwt-type="menuitem" text="Form" url="?nav=datamodel"></div>
+        </div>
+        </div>
+        <div gwt-type="texttoolitem" text="Customer"  iconstyle="customerIcon" tooltip="Customer and party">
+        <div gwt-type="menu">
+         <div gwt-type="menuitem" text="Create" url="?nav=datamodel"></div>
+         <div gwt-type="menuitem" text="Customer Test" url="?nav=datamodel"></div>
+         <div gwt-type="menuitem" text="New Customer Form Test" url="?nav=datamodel"></div>
+        </div>
+        </div>
+        <div gwt-type="texttoolitem" text="Inventory"  iconstyle="inventoryIcon" tooltip="Inventory management">
+        <div gwt-type="menu">
+         <div gwt-type="menuitem" text="Find" url="?nav=datamodel"></div>
+         <div gwt-type="menuitem" text="Create" url="?nav=datamodel"></div>
+         <div gwt-type="menuitem" text="Merge" url="?nav=datamodel"></div>
+         <div gwt-type="menuitem" text="Create Store" url="?nav=datamodel"></div>
+        </div>
+        </div>
+        <div gwt-type="texttoolitem" text="Reports"  iconstyle="reportsIcon">
+        <div gwt-type="menu">
+         <div gwt-type="menuitem" text="HB Test" url="?nav=datamodel"></div>
+         <div gwt-type="menuitem" text="All Reports" url="?nav=datamodel"></div>
+        </div>
+        </div>
+        <div gwt-type="texttoolitem" text="System"  iconstyle="systemIcon">
+        <div gwt-type="menu">
+         <div gwt-type="menuitem" text="Audit Events" url="?nav=datamodel"></div>
+        </div>
+        </div>
+        <div gwt-type="texttoolitem" text="Examples"  iconstyle="testIcon">
+        <div gwt-type="menu">
+        <div gwt-type="menuitem" text="Hello"  iconstyle="myicon"></div>
+        <div gwt-type="menuitem" text="there buddy"></div>
+        <div gwt-type="separatormenuitem"></div>
+        <div gwt-type="menuitem" text="sub menu">
+            <div gwt-type="menu">
+                <div gwt-type="menuitem" text="sub item"></div>
+                <div gwt-type="menuitem" text="sub item #2"></div>
+            </div>
+        </div>
+        <div gwt-type="menuitem" text="select one...">
+            <div gwt-type="checkmenuitem" text="Dogs"  checked="true" ></div>
+            <div gwt-type="checkmenuitem" text="cats"></div>
+        </div>
+        <div gwt-type="DateMenuItem"></div>
+        </div>
+        </div>
+    </div>
+</td>
+</tr>   
+<tr>
+<td valign="top">Rich text</td><td valign="top">&nbsp;:&nbsp;</td>
+<td valign="top">    
+    <div gwt-type="gwt.RichTextArea" gwt-children-type="none">
+    </div>
+</td>
+</tr>    
+<tr>
+<td valign="top">List Manager</td><td valign="top">&nbsp;:&nbsp;</td>
+<td valign="top">    
+<table cellpadding="4" cellspacing="4" border="0" width="100%">
+    <div id="listcontainer.1" gwt-type="LayoutContainer">
+    </div>
+</table>
+</td>
+</tr>    
+</table>
+
+<div gwt-type="ListExistingItems" containerid="listcontainer.1" gwt-children-type="all">
+<div id="item.1">
+    <tr>
+        <td valign="top">
+            <table>
+                <tr>
+                    <td>
+                        <table>
+                            <tr><td>First Name</td><td><input type="text" name="firstname"/></td></tr>
+                            <tr><td>Last Name</td><td><input type="text" name="lastname"/></td></tr>
+                        </table>
+                    </td>
+                    <td valign="bottom" align="right">
+                        <div gwt-type="ListRemoveItem" listcontainerid="listcontainer.1" listitemid="item.1" gwt-children-type="none" image="./images/remove_btn.png"></div>
+                    </td>
+                    <td valign="bottom" align="right">
+                        <div gwt-type="ListAddItem" templateid="listtemplate.1" gwt-children-type="none" image="./images/Add_btn.png"></div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>    
+</div>
+</div>
+
+<div id="listtemplate.1" gwt-type="ListAddTemplate" containerid="listcontainer.1" gwt-children-type="all">
+<div id="placeholder_item_id">
+    <tr>
+        <td valign="top">
+            <table>
+                <tr>
+                    <td>
+                        <table>
+                            <tr><td>First Name</td><td><input type="text" name="firstname"/></td></tr>
+                            <tr><td>Last Name</td><td><input type="text" name="lastname"/></td></tr>
+                        </table>
+                    </td>
+                    <td valign="bottom" align="right">
+                        <div gwt-type="ListRemoveItem" listcontainerid="placeholder_container_id" listitemid="placeholder_item_id" gwt-children-type="none" image="./images/remove_btn.png"></div>
+                    </td>
+                    <td valign="bottom" align="right">
+                        <div gwt-type="ListAddItem" templateid="placeholder_template_id" gwt-children-type="none" image="./images/Add_btn.png"></div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>    
+</div>
+</div>
+
+  </body>
+ </html>
+ 

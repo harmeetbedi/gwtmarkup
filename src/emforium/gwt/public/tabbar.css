@@ -1,0 +1,122 @@
+.gwt-TabBar {
+}
+
+.gwt-TabBar .gwt-TabBarFirst {
+  width: 5px;  /* first tab distance from the left */
+}
+
+.gwt-TabBar .gwt-TabBarRest {
+}
+
+.gwt-TabBar .gwt-TabBarItem {
+  border-collapse: collapse;
+  margin-left: 6px;
+}
+
+.gwt-TabBar .gwt-TabBarItem .topCenter {
+  padding: 0px;
+  background: url(images/tab/hborder.png) 0px -32px repeat-x;
+}
+
+.gwt-TabBar .gwt-TabBarItem .topLeft,
+.gwt-TabBar .gwt-TabBarItem .topRight {
+  padding: 0px;
+  zoom: 1;
+}
+
+.gwt-TabBar .gwt-TabBarItem .topLeftInner,
+.gwt-TabBar .gwt-TabBarItem .topRightInner {
+  width: 6px;
+  height: 6px;
+}
+
+.gwt-TabBar .gwt-TabBarItem .middleLeft,
+.gwt-TabBar .gwt-TabBarItem .middleRight {
+  width: 6px;
+  padding: 0px;
+  background: #e4e9f3 url(images/tab/bg_tab.png) repeat-x;
+}
+
+.gwt-TabBar .gwt-TabBarItem .middleCenter {
+  padding: 0px 4px 2px 4px;
+  cursor: pointer;
+  cursor: hand;
+  font-weight: bold;
+  text-align: center;
+  background: #e4e9f3 url(images/tab/bg_tab.png) repeat-x;
+}
+
+.gwt-TabBar .gwt-TabBarItem-selected .topCenter {
+  background: url(images/tab/hborder.png) 0px -38px repeat-x;
+}
+
+.gwt-TabBar .gwt-TabBarItem-selected .middleLeft,
+.gwt-TabBar .gwt-TabBarItem-selected .middleRight {
+  background: #92c1f0 url(images/tab/bg_tab_selected.png) repeat-x;
+}
+
+.gwt-TabBar .gwt-TabBarItem-selected .middleCenter {
+  cursor: default;
+  background: #92c1f0 url(images/tab/bg_tab_selected.png) repeat-x;
+}
+
+html>body .gwt-TabBar .gwt-TabBarItem .topLeft {
+  background: url(images/tab/corner.png) no-repeat 0px -55px;
+}
+
+html>body .gwt-TabBar .gwt-TabBarItem .topRight {
+  background: url(images/tab/corner.png) no-repeat -6px -55px;
+}
+
+html>body .gwt-TabBar .gwt-TabBarItem-selected .topLeft {
+  background-position: 0px -61px;
+}
+
+html>body .gwt-TabBar .gwt-TabBarItem-selected .topRight {
+  background-position: -6px -61px;
+}
+
+* html .gwt-TabBar .gwt-TabBarItem .topLeftInner {
+  width: 5px;
+  height: 61px;
+  margin-top: -55px;
+  overflow: hidden;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/tab/corner.png',sizingMethod='crop');
+}
+
+* html .gwt-TabBar .gwt-TabBarItem .topRightInner {
+  width: 12px;
+  height: 61px;
+  margin-top: -55px;
+  margin-left: -6px;
+  overflow: hidden;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/tab/corner.png',sizingMethod='crop');
+}
+
+* html .gwt-TabBar .gwt-TabBarItem-selected .topLeftInner {
+  width: 5px;
+  height: 67px;
+  margin-top: -61px;
+  overflow: hidden;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/tab/corner.png',sizingMethod='crop');
+}
+
+* html .gwt-TabBar .gwt-TabBarItem-selected .topRightInner {
+  width: 12px;
+  height: 67px;
+  margin-top: -61px;
+  margin-left: -6px;
+  overflow: hidden;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/tab/corner.png',sizingMethod='crop');
+}
+
+.gwt-TabPanel {
+}
+
+.gwt-TabPanelBottom {
+  border-color: #92c1f0;
+  border-style: solid;
+  border-width: 3px 2px 2px;
+  overflow: hidden;
+  padding: 6px;
+}

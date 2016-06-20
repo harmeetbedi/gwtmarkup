@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+
+<html>
+<head><META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>OFBiz: Party Manager: Edit Party Relationships</title>
+
+    <script language="javascript" src="emforium.gwt.WidgetFactory.nocache.js"></script>
+    <iframe src="javascript:''" id="__gwt_historyFrame" style="width:0;height:0;border:0"></iframe>
+</head>
+
+
+<body>
+    <div id="outer-panel">
+        <table cellspacing="0" cellpadding="0" class="DecoratorPanel">
+            <tbody>
+                <tr>
+                    <td align="left" valign="top" colspan="3">
+                        <table cellpadding="0" cellspacing="0" width="100%">
+                                <tbody>
+                                    <tr>
+
+                                        <td align="right" valign="top">
+                                        
+                                            
+                                            <table cellpadding="0" cellspacing="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="vertical-align:top" align="right">
+
+    <gwtcontainer widget-type="toolbar">
+        <gwtleaf widget-type="texttoolitem" text="Home"  iconstyle="homeIcon" url="/dashboard/control/main?externalLoginKey=EL266284786237">
+        </gwtleaf>
+        <gwtleaf widget-type="texttoolitem" text="POS"  iconstyle="posIcon" url="/pos/control/main?externalLoginKey=EL266284786237">
+        </gwtleaf>
+        <gwtleaf widget-type="texttoolitem" text="CRM"  iconstyle="crmIcon" url="/crm/control/main?externalLoginKey=EL266284786237">
+        </gwtleaf>
+        <gwtleaf widget-type="texttoolitem" text="Inventory"  iconstyle="inventoryIcon" url="/inventory/control/main?externalLoginKey=EL266284786237">
+        </gwtleaf>
+
+        <gwtleaf widget-type="texttoolitem" text="Services"  iconstyle="servicesIcon" url="/services/control/main?externalLoginKey=EL266284786237">
+        </gwtleaf>
+        <gwtleaf widget-type="texttoolitem" text="Reports"  iconstyle="reportsIcon" url="/reports/control/main?externalLoginKey=EL266284786237">
+        </gwtleaf>
+        <gwtleaf widget-type="texttoolitem" text="Admin"  iconstyle="adminIcon" url="/admin/control/main?externalLoginKey=EL266284786237">
+        </gwtleaf>
+        <gwtleaf widget-type="texttoolitem" text="Old"  iconstyle="oldIcon" url="/partymgr/control/main?externalLoginKey=EL266284786237">
+        </gwtleaf>
+    </gwtcontainer>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="topLeft">
+                            <div class="topLeftInner"></div>
+                        </td>
+                        <td class="topCenter">
+                            <div class="topCenterInner"></div>
+                        </td>
+                        <td class="topRight">
+
+                            <div class="topRightInner"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="middleLeft">
+                            <div class="middleLeftInner"></div>
+                        </td>
+                        <td class="middleCenter">
+                            <div class="middleCenterInner">
+
+
+<div class="contentarea">
+
+
+<div id="column-container">
+
+
+<div id="content-main-section" class="leftonly">
+
+
+
+
+<gwtcontainer widget-type="portal" columnWidths="1">
+<gwtcontainer widget-type="portlet" heading="Relationships" collapsible="true" expanded="true" headerVisible="true" gwtcontainer-children-type="all" scrollMode="auto">
+
+
+
+ <table cellspacing="0" class="basic-table">
+  <tr class="header-row">
+   <td>Party</td>
+   <td>Type</td>
+   <td>   <td>Status</td>
+   <td>Thru Date &amp; Time</td>
+
+   <td>Comments </td>
+   <td>Update</td>
+</td>
+   <td>Delete</td>
+  </tr>
+  <tr>
+   <td>   Your Company Name Here <a href="/crm/control/viewprofile?partyId=Company">[Company]</a></td>
+
+   <td>Agent</td>
+   <td>
+<form method="post"  action="/crm/control/updatePartyRelationship"  id="ListPartyRelationships" class="basic-form" onSubmit="javascript:submitFormDisableSubmits(this)" name="ListPartyRelationships_o_0">
+<input type="hidden" name="partyId" value="10000"/>
+<input type="hidden" name="partyIdTo" value="10000"/>
+<input type="hidden" name="fromDate" value="2008-12-17 11:33:35.816"/>
+<input type="hidden" name="partyIdFrom" value="Company"/>
+<input type="hidden" name="partyRelationshipTypeId" value="AGENT"/>
+<input type="hidden" name="deleteButton"/>
+   <td><select name="statusId" size="1"><option selected="selected" value="REL_PAST">Past</option><option value="REL_PAST">---</option><option value="REL_ACTIVE">Active</option><option value="REL_PAST">Past</option></select></td>
+
+   <td><div displayFormat="MMM dd yyyy" widget-type="DateField" type="text" name="thruDate" title="Format: yyyy-MM-dd HH:mm:ss.SSS" value="2008-12-26 00:00:00.000" size="25" maxlength="30"></div></td>
+   <td><input type="text" name="comments" value="test" size="25"/>
+</td>
+   <td><input type="submit" name="updateButton" value="Update"/></td>
+</form>
+
+</td>
+   <td><a href="/crm/control/deletePartyRelationship?partyId=10000&amp;partyIdFrom=Company&amp;partyIdTo=10000&amp;roleTypeIdTo=_NA_&amp;roleTypeIdFrom=_NA_&amp;fromDate=2008-12-17 11:33:35.816">Delete</a></td>
+  </tr>
+  <tr>
+
+   <td>John  Smith  <a href="/crm/control/viewprofile?partyId=10011">[10011]</a></td>
+   <td>Agent</td>
+   <td>
+<form method="post"  action="/crm/control/updatePartyRelationship"  id="ListPartyRelationships" class="basic-form" onSubmit="javascript:submitFormDisableSubmits(this)" name="ListPartyRelationships_o_1">
+<input type="hidden" name="partyId" value="10000"/>
+<input type="hidden" name="partyIdTo" value="10000"/>
+<input type="hidden" name="fromDate" value="2008-12-14 15:31:58.220"/>
+<input type="hidden" name="partyIdFrom" value="10011"/>
+<input type="hidden" name="partyRelationshipTypeId" value="AGENT"/>
+<input type="hidden" name="deleteButton"/>
+   <td><select name="statusId" size="1"><option selected="selected" value="REL_ACTIVE">Active</option><option value="REL_ACTIVE">---</option><option value="REL_ACTIVE">Active</option><option value="REL_PAST">Past</option></select></td>
+
+   <td><gwtleaf displayFormat="MMM dd yyyy" widget-type="DateField" type="text" name="thruDate" title="Format: yyyy-MM-dd HH:mm:ss.SSS" value="2008-12-24 00:00:00.000" size="25" maxlength="30"></gwtleaf></td>
+   <td><input type="text" name="comments" value="test2" size="25"/>
+</td>
+   <td><input type="submit" name="updateButton" value="Update"/></td>
+</form>
+
+</td>
+   <td><a href="/crm/control/deletePartyRelationship?partyId=10000&amp;partyIdFrom=10011&amp;partyIdTo=10000&amp;roleTypeIdTo=_NA_&amp;roleTypeIdFrom=_NA_&amp;fromDate=2008-12-14 15:31:58.220">Delete</a></td>
+  </tr>
+  <tr>
+
+   <td>Gabby  Risher  <a href="/crm/control/viewprofile?partyId=10220">[10220]</a></td>
+   <td>Child</td>
+   <td>
+<form method="post"  action="/crm/control/updatePartyRelationship"  id="ListPartyRelationships" class="basic-form" onSubmit="javascript:submitFormDisableSubmits(this)" name="ListPartyRelationships_o_2">
+<input type="hidden" name="partyId" value="10000"/>
+<input type="hidden" name="partyIdTo" value="10000"/>
+<input type="hidden" name="fromDate" value="2008-12-17 14:45:05.454"/>
+<input type="hidden" name="partyIdFrom" value="10220"/>
+<input type="hidden" name="partyRelationshipTypeId" value="CHILD"/>
+<input type="hidden" name="deleteButton"/>
+   <td><select name="statusId" size="1"><option selected="selected" value="REL_ACTIVE">Active</option><option value="REL_ACTIVE">---</option><option value="REL_ACTIVE">Active</option><option value="REL_PAST">Past</option></select></td>
+
+   <td><gwtleaf displayFormat="MMM dd yyyy" widget-type="DateField" type="text" name="thruDate" title="Format: yyyy-MM-dd HH:mm:ss.SSS" value="2008-12-29 00:00:00.000" size="25" maxlength="30"></gwtleaf></td>
+   <td><input type="text" name="comments" value="asddd" size="25"/>
+</td>
+   <td><input type="submit" name="updateButton" value="Update"/></td>
+</form>
+
+</td>
+   <td><a href="/crm/control/deletePartyRelationship?partyId=10000&amp;partyIdFrom=10220&amp;partyIdTo=10000&amp;roleTypeIdTo=_NA_&amp;roleTypeIdFrom=_NA_&amp;fromDate=2008-12-17 14:45:05.454">Delete</a></td>
+  </tr>
+ </table>
+
+
+
+</gwtcontainer>
+<gwtcontainer widget-type="portlet" heading="Add other party relationship" collapsible="true" expanded="true" headerVisible="true" gwtcontainer-children-type="all" scrollMode="auto">
+
+<form method="post"  action="/crm/control/createPartyRelationship"  id="AddOtherPartyRelationship" class="basic-form" onSubmit="javascript:submitFormDisableSubmits(this)" name="AddOtherPartyRelationship">
+<input type="hidden" name="partyId" value="10000"/>
+<input type="hidden" name="partyIdTo" value="10000"/>
+<div class="fieldgroup" id="_G1228_"><div class="fieldgroup-title-bar"><table><tr><td class="collapse"></td><td></td></tr></table></div><div id="_G1228__body" class="fieldgroup-body"> <table cellspacing="0" class="basic-table">
+  <tr>
+   <td class="label">To</td>
+
+   <td class="label">Type</td>
+   <td><select name="partyRelationshipTypeId" size="1"><option value="">&nbsp;</option><option value="ACCOUNT">Account</option><option value="AGENT">Agent</option><option value="ASSISTANT">Assistant</option><option value="CHILD">Child</option><option value="CONTACT_REL">Contact</option><option value="CUSTOMER_REL">Customer</option><option value="DISTRIBUTION_CHANNEL">Distributor</option><option value="EMPLOYMENT">Employee</option><option value="FRIEND">Friend</option><option value="GROUP_ROLLUP">Group Member</option><option value="HOST_SERVER_VISITOR">Host Server Visitor</option><option value="VISITOR_ISP">ISP Visitor</option><option value="LEAD_OWNER">Lead owner</option><option value="LEAD_REL">Lead Relation</option><option value="MANAGER">Manager</option><option value="OWNER">Owner</option><option value="PARENT">Parent</option><option value="PARENT_ACCOUNT">Parent account</option><option value="PARTNERSHIP">Partner</option><option value="REPORTS_TO">Reports to</option><option value="SALES_AFFILIATE">Sales Affiliate</option><option value="SPOUSE">Spouse</option><option value="SUPPLIER_REL">Supplier</option><option value="WEB_MASTER_ASSIGNMEN">Web Master</option></select></td>
+
+  </tr>
+  <tr>
+   <td class="label">Status</td>
+   <td><select name="statusId" size="1"><option value="REL_ACTIVE">Active</option><option value="REL_PAST">Past</option></select></td>
+   <td class="label">Thru Date &amp; Time</td>
+   <td><gwtleaf displayFormat="MMM dd yyyy" widget-type="DateField" type="text" name="thruDate" title="Format: yyyy-MM-dd HH:mm:ss.SSS" size="25" maxlength="30"></gwtleaf></td>
+
+  </tr>
+  <tr>
+   <td class="label">Comments </td>
+   <td colspan="3"><input type="text" name="comments" size="25"/>
+</td>
+  </tr>
+  <tr>
+   <td class="label">&nbsp;</td>
+   <td colspan="3"><input type="submit" name="submitButton" value="Submit"/></td>
+
+  </tr>
+ </table>
+</div></div></form>
+
+</gwtcontainer>
+</gwtcontainer>
+
+</div>
+<div class="clear">
+</div>
+</div>
+</div>
+
+
+                </div>
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+</body></html>
+
+
+
+
+
+

@@ -1,0 +1,897 @@
+    <!-- The fully-qualified module name, followed by 'nocache.js' -->
+  <script type="text/javascript">
+  <!--
+  function partyNav(partyId) {
+      alert("partyNav: "+partyId);
+  }
+  function helloWorld2(id,source, sourceElem, value) {
+      alert("helloworld2: "+value);
+  }
+  function gwtCallback(func,args) {
+      //alert( func );
+      var functionIdx = func.indexOf('function');
+      if ( functionIdx == 0 ) {
+          eval(func).apply(this,args);
+      } else {
+        if (func.indexOf('(') >= 0 ) {
+            eval(func);
+        } else {
+            eval(func).apply(this,args);
+        }
+      }
+    }
+  function chartSingleSelect(id,source, sourceElem, arraySelected, value) {
+      alert("chartSingleSelect.1: "+id);
+      alert("chartSingleSelect.2: "+arraySelected);
+      alert("chartSingleSelect.3: "+value);
+      alert("chartSingleSelect.4: "+value.row+", "+value.column);
+  }
+  function chartMultiSelect(id,source, sourceElem, arraySelected, value) {
+      alert("chartMultiSelect.1: "+id);
+      alert("chartMultiSelect.2: "+arraySelected);
+      alert("chartMultiSelect.3: "+value);
+  }
+  function cfCallback(id,source, sourceElem, value) {
+      //alert("cfCallback: "+id+", ["+value+"]");
+      var idx = gwtCoverFlowGetSelectedImage('f5');
+      //alert('selidx='+idx);
+      //var dd = document.getElementById("image-dd");
+      //dd.selectedIndex = value;
+      //alert"txtCallback1-1: "+source.@com.google.gwt.user.client.ui.TextArea::getText());
+      //gwtSetTextAreaValue("bar",value);
+      //source.@emforium.gwt.widget.custom.TextArea::setTextWithMaxLimitCheck(Ljava/lang/String;)("hello there");
+      //source.@com.google.gwt.user.client.ui.TextArea::setText(Ljava/lang/String;)("hello there");
+      //alert("txtCallback1-1: "+sourceElem.value);
+      /*
+      var elem = document.getElementById(id);
+      alert("txtCallback1 step1: "+elem);
+      alert("txtCallback1 step2: "+elem.innerText);
+      alert("txtCallback1 step3: "+elem.nodeName);
+      alert("txtCallback1: "+id+", ["+value+"]");
+      */
+  }
+  function txtCallback1x(id,source, sourceElem, value) {
+      alert("txtCallback1: "+id+", ["+value+"], "+sourceElem+", "+source);
+      alert("txtCallback1-1: "+sourceElem.value);
+      var elem = document.getElementById("foo");
+      alert("txtCallback1-2: "+elem.value);
+      var elem2 = document.getElementById("bar");
+      elem2.value = elem.value;
+      //alert("txtCallback1-1: "+sourceElem.value);
+      /*
+      var elem = document.getElementById(id);
+      alert("txtCallback1 step1: "+elem);
+      alert("txtCallback1 step2: "+elem.innerText);
+      alert("txtCallback1 step3: "+elem.nodeName);
+      alert("txtCallback1: "+id+", ["+value+"]");
+      */
+  }
+  function txtCallback1(id,source, sourceElem, value) {
+      //alert("txtCallback1: "+id+", ["+value+"], "+sourceElem+", "+source);
+      //alert"txtCallback1-1: "+source.@com.google.gwt.user.client.ui.TextArea::getText());
+      gwtSetTextAreaValue("bar",value);
+      //source.@emforium.gwt.widget.custom.TextArea::setTextWithMaxLimitCheck(Ljava/lang/String;)("hello there");
+      //source.@com.google.gwt.user.client.ui.TextArea::setText(Ljava/lang/String;)("hello there");
+      //alert("txtCallback1-1: "+sourceElem.value);
+      /*
+      var elem = document.getElementById(id);
+      alert("txtCallback1 step1: "+elem);
+      alert("txtCallback1 step2: "+elem.innerText);
+      alert("txtCallback1 step3: "+elem.nodeName);
+      alert("txtCallback1: "+id+", ["+value+"]");
+      */
+  }
+  function txtCallback2(id,source, sourceElem, value) {
+      alert("txtCallback2: "+id+", ["+value+"]");
+  }
+  function txtCallback3(id,source, sourceElem, value) {
+      alert("txtCallback3: "+id+", ["+value+"]");
+  }
+  function txtCallback4(id,source, sourceElem, value) {
+      alert("txtCallback4: "+id+", ["+value+"]");
+  }
+  // -->
+  </script>
+  <script language="javascript" src="emforium.gwt.WidgetFactory.nocache.js"></script>
+    
+    
+    <!-- Include a history iframe to enable full GWT history support -->
+    <!-- (the id must be exactly as shown)                           -->
+    <iframe src="javascript:''" id="__gwt_historyFrame" style="width:0;height:0;border:0"></iframe>
+    
+    <div>Loading.....</div>
+    
+<hr />
+
+<h2>List Item Test (revised HTML layout)</h2>
+<br/><br/><hr/><br/><br/>
+<table width="100%" border="2">
+<tr><td>
+<SELECT NAME="images" id="image-dd" onchange="gwtCoverFlowSetSelectedImage('f5',this.selectedIndex);">
+<OPTION value="0">image 0</OPTION>
+<OPTION value="1">image 1</OPTION>
+<OPTION value="2">image 2</OPTION>
+<OPTION value="3">image 3</OPTION>
+<OPTION value="4">image 4</OPTION>
+<OPTION value="5">image 5</OPTION>
+<OPTION value="6">image 6</OPTION>
+</SELECT>
+</td></tr>
+<tr><td>
+<span id="f5"  widget-type="custom.CoverFlow" width="100%" height="500">
+<cf-images>
+<cf-image url="http://immutable.emforium.com/public/b7821f4df242130ad7f3225f806f52e1.jpg" width="500" height="500"> </cf-image>
+<cf-image url="http://immutable.emforium.com/public/e77054bafb4de875c52e55ace5a05e4e.jpg" width="640" height="480"> </cf-image>
+<cf-image url="http://immutable.emforium.com/public/e5185062837481bc2d5d82996fbdef82.jpg" width="640" height="480"> </cf-image>
+<cf-image url="http://immutable.emforium.com/public/265ae8a69502013987429f283e735279.jpg" width="640" height="480"> </cf-image>
+<cf-image url="http://immutable.emforium.com/public/1684c2e40a8e4676c4999447b7f47f39.jpg" width="1024" height="768"> </cf-image>
+<cf-image url="http://environment.nationalgeographic.com/staticfiles/NGS/Shared/StaticFiles/Environment/Images/Habitat/dryvalleycontrast-516285-sw.jpg" width="800" height="600"> </cf-image>
+<cf-image url="http://environment.nationalgeographic.com/staticfiles/NGS/Shared/StaticFiles/Science/Images/Content/iceberg-sunset-clouds-mm72462965-lw.jpg" width="1024" height="768"> </cf-image>
+</cf-images>
+</span>
+</td>
+<td widh="90%">Hello</td>
+</tr>
+</table>
+<br/><br/><hr/><br/><br/>
+<span id="pieconf1" widget-type="chart.PieChartOptions" width="400" height="200" enable3D="true" title="My Daily Activities" 
+    backgroundColor="white" borderColor="black" focusBorderColor="none" legend="none" legendBackgroundColor="none" legendTextColor="none" 
+    titleColor="red" colors="none" legendPosition="none"> 
+</span>
+<span id="barconf1" widget-type="chart.BarChartOptions" width="400" height="200" enable3D="true" title="My Daily Activities" 
+    backgroundColor="white" borderColor="black" focusBorderColor="none" legend="none" legendBackgroundColor="none" legendTextColor="none" 
+    titleColor="red" colors="none" legendPosition="none"
+    axisBackgroundColor="none" axisColor="none" 
+    stacked="false"
+    > 
+</span>
+<span id="lineconf1" widget-type="chart.LineChartOptions" width="400" height="200" enable3D="true" title="My Daily Activities" 
+    backgroundColor="white" borderColor="black" focusBorderColor="none" legend="none" legendBackgroundColor="none" legendTextColor="none" 
+    titleColor="red" colors="none" legendPosition="none"
+    axisBackgroundColor="none" axisColor="none" 
+    smoothLine="true"
+    > 
+</span>
+<span id="columnconf1" widget-type="chart.ColumnChartOptions" width="400" height="200" enable3D="true" title="My Daily Activities" 
+    backgroundColor="white" borderColor="black" focusBorderColor="none" legend="none" legendBackgroundColor="none" legendTextColor="none" 
+    titleColor="red" colors="none" legendPosition="none"
+    axisBackgroundColor="none" axisColor="none" 
+    stacked="false"
+    > 
+</span>
+<span id="scatterconf1" widget-type="chart.ScatterChartOptions" width="400" height="200" enable3D="true" title="My Daily Activities" 
+    backgroundColor="white" borderColor="black" focusBorderColor="none" legend="none" legendBackgroundColor="none" legendTextColor="none" 
+    titleColor="red" colors="none" legendPosition="none"
+    axisBackgroundColor="none" axisColor="none" 
+    > 
+</span>
+<span id="areaconf1" widget-type="chart.AreaChartOptions" width="400" height="200" enable3D="true" title="My Daily Activities" 
+    backgroundColor="white" borderColor="black" focusBorderColor="none" legend="none" legendBackgroundColor="none" legendTextColor="none" 
+    titleColor="red" colors="none" legendPosition="none"
+    axisBackgroundColor="none" axisColor="none" 
+    stacked="false"
+    > 
+</span>
+<span id="tlconf1" widget-type="chart.AnnotatedTimeLineOptions" width="800" height="700" displayAnnotations="true"> 
+</span>
+<span id="orgconf1" widget-type="chart.OrgChartOptions" size="medium" allowHtml="false"> 
+</span>
+<span id="motionconf1" widget-type="chart.MotionChartOptions" width="400" height="300"> 
+</span>
+<span id="tableconf1" widget-type="chart.TableOptions" allowHtml="true" showRowNumber="true" pageSize="2" pagePolicy="none" sortPolicy="none">
+</span>
+<span id="motiondata1" widget-type="chart.Data">
+<data>
+<column type="string" title="Fruit"> </column>
+<column type="date" title="Date"> </column>
+<column type="number" title="Sales"> </column>
+<column type="number" title="Expenses"> </column>
+<column type="string" title="Location"> </column>
+<row>
+<cell value="Apples"> </cell>
+<cell value="1998-1-2"> </cell>
+<cell value="1000"> </cell>
+<cell value="300"> </cell>
+<cell value="East"> </cell>
+</row>
+<row>
+<cell value="Oranges"> </cell>
+<cell value="1998-1-2"> </cell>
+<cell value="950"> </cell>
+<cell value="200"> </cell>
+<cell value="West"> </cell>
+</row>
+<row>
+<cell value="Bananas"> </cell>
+<cell value="1998-1-2"> </cell>
+<cell value="300"> </cell>
+<cell value="250"> </cell>
+<cell value="West"> </cell>
+</row>
+<row>
+<cell value="Apples"> </cell>
+<cell value="1998-1-2"> </cell>
+<cell value="788"> </cell>
+<cell value="617"> </cell>
+<cell value="West"> </cell>
+</row>
+</data>
+</span>
+<span id="orgdata1" widget-type="chart.Data">
+<data>
+<column type="string" title="From"> </column>
+<column type="string" title="To"> </column>
+<column type="string" title="Tooltip"> </column>
+<row>
+<cell value="User A"> </cell>
+<cell> </cell>
+<cell value="User with relationship"> </cell>
+</row>
+<row>
+<cell value="User B"> </cell>
+<cell value="User A"> </cell>
+<cell value="Friend"> </cell>
+</row>
+<row>
+<cell value="User C"> </cell>
+<cell value="User A"> </cell>
+<cell value="Coworker"> </cell>
+</row>
+<row>
+<cell value="User D"> </cell>
+<cell value="User A"> </cell>
+<cell value="Coworker"> </cell>
+</row>
+</data>
+</span>
+<span id="chartdata1" widget-type="chart.Data">
+<data>
+<column type="string" title="Task"> </column>
+<column type="number" title="Hours per Day"> </column>
+<row>
+<cell value="Work"> </cell>
+<cell value="11"> </cell>
+</row>
+<row>
+<cell value="Eat"> </cell>
+<cell value="2"> </cell>
+</row>
+<row>
+<cell value="Commute"> </cell>
+<cell value="2"> </cell>
+</row>
+<row>
+<cell value="Watch TV"> </cell>
+<cell value="2"> </cell>
+</row>
+<row>
+<cell value="Sleep"> </cell>
+<cell value="7"> </cell>
+</row>
+</data>
+</span>
+<span id="tldata1" widget-type="chart.Data">
+<data>
+<column type="date" title="Date"> </column>
+<column type="number" title="Sold Pencils"> </column>
+<column type="string" title="title1"> </column>
+<column type="string" title="text1"> </column>
+<column type="number" title="Sold Pens"> </column>
+<column type="string" title="title2"> </column>
+<column type="string" title="text2"> </column>
+<row>
+    <cell value="2008-1-1"> </cell>
+    <cell value="30000"> </cell>
+    <cell> </cell>
+    <cell> </cell>
+    <cell value="40645"> </cell>
+    <cell> </cell>
+    <cell> </cell>
+</row>
+<row>
+    <cell value="2008-1-2"> </cell>
+    <cell value="14045"> </cell>
+    <cell> </cell>
+    <cell> </cell>
+    <cell value="20374"> </cell>
+    <cell> </cell>
+    <cell> </cell>
+</row>
+<row>
+    <cell value="2008-1-3"> </cell>
+    <cell value="55022"> </cell>
+    <cell> </cell>
+    <cell> </cell>
+    <cell value="50766"> </cell>
+    <cell> </cell>
+    <cell> </cell>
+</row>
+<row>
+    <cell value="2008-1-4"> </cell>
+    <cell value="75284"> </cell>
+    <cell> </cell>
+    <cell> </cell>
+    <cell value="14334"> </cell>
+    <cell value="Out of Stock"> </cell>
+    <cell value="Ran out of stock on pens at 4pm"> </cell>
+</row>
+<row>
+    <cell value="2008-1-5"> </cell>
+    <cell value="41476"> </cell>
+    <cell value="Bought Pens"> </cell>
+    <cell value="Bought 200k pens"> </cell>
+    <cell value="66467"> </cell>
+    <cell> </cell>
+    <cell> </cell>
+</row>
+<row>
+    <cell value="2008-1-6"> </cell>
+    <cell value="33322"> </cell>
+    <cell> </cell>
+    <cell> </cell>
+    <cell value="39463"> </cell>
+    <cell> </cell>
+    <cell> </cell>
+</row>
+</data>
+</span>
+<span id="pie1" widget-type="chart.Chart" configId="pieconf1" dataId="chartdata1" onSingleSelect="chartSingleSelect" onMultipleSelect="chartMultiSelect">
+</span>
+<span id="bar1" widget-type="chart.Chart" configId="barconf1" dataId="chartdata1" onSingleSelect="chartSingleSelect" onMultipleSelect="chartMultiSelect">
+</span>
+<span id="line1" widget-type="chart.Chart" configId="lineconf1" dataId="chartdata1">
+</span>
+<span id="column1" widget-type="chart.Chart" configId="columnconf1" dataId="chartdata1">
+</span>
+<span id="scatter1" widget-type="chart.Chart" configId="scatterconf1" dataId="chartdata1">
+</span>
+<span id="area1" widget-type="chart.Chart" configId="areaconf1" dataId="chartdata1">
+</span>
+<span id="org1" widget-type="chart.Chart" configId="orgconf1" dataId="orgdata1">
+</span>
+<span id="motion1" widget-type="chart.Chart" configId="motionconf1" dataId="motiondata1">
+</span>
+<span id="tl1" widget-type="chart.Chart" configId="tlconf1" dataId="tldata1">
+</span>
+<span id="table1" widget-type="chart.Chart" configId="tableconf1" dataId="chartdata1" onSingleSelect="chartSingleSelect" onMultipleSelect="chartMultiSelect">
+</span>
+<span id="gwf28" widget-type="custom.ClientGrid" grid-height="0" grid-width="0" scroll-mode="none" qtip-width="none" scrollbar-width="0" on-row-click="partyNav('{partyNavId}')" 
+    selection-model="checkbox-simple" page-size="15" show-group-columns="true" row-expander-template="none">
+<griddata>
+<column field="partyNavId" display="Party Nav Id" display-size="0" type="string" hidden="true" sortable="true" fixed="true" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="true" editable="false" row-click="false" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="partyHoverId" display="Party Hover Id" display-size="0" type="string" hidden="true" sortable="true" fixed="true" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="true" editable="false" row-click="false" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="viewButton" display=" " display-size="0" type="string" hidden="false" sortable="false" fixed="true" groupable="false" relative-width="60" absolute-width="35" auto-expand="false" grid-menu-disabled="true" editable="false" row-click="true" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="partyIdConverse" display="Name" display-size="0" type="string" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" row-click="true" tooltip="true" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="roleDescription" display="Type" display-size="25" type="string" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" row-click="true" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="fromDate" display="Since" display-size="25" type="date" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" row-click="true" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="statusId" display="Status" display-size="25" type="string" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" row-click="true" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="comments" display="Comments " display-size="25" type="string" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" row-click="true" tooltip="true" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="editButton" display=" " display-size="0" type="string" hidden="false" sortable="false" fixed="true" groupable="false" relative-width="60" absolute-width="35" auto-expand="false" grid-menu-disabled="true" editable="false" row-click="false" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="deleteButton" display=" " display-size="0" type="string" hidden="false" sortable="false" fixed="true" groupable="false" relative-width="60" absolute-width="35" auto-expand="false" grid-menu-disabled="true" editable="false" row-click="false" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<row><cell name="partyNavId" value="10031"> </cell><cell name="partyHoverId" value="hc-party-10031"> </cell><cell name="viewButton" value="lt-x-ltimg  src=&quot;/emf-images/buttons/icon_view.png&quot; border=&quot;0&quot;/gt-x-gt"> </cell><cell name="partyIdConverse" value="Jeff  Buzbuzian "> </cell><cell name="roleDescription" value="Spouse"> </cell><cell name="fromDate" value="2009-04-17"> </cell><cell name="statusId" value="Active"> </cell><cell name="comments" value="Not Married"> </cell><cell name="editButton" value="lt-x-lta href=&quot;/crm/control/EditPartyRelationship?partyId=10028&amp;amp;partyIdFrom=10031&amp;amp;partyIdTo=10028&amp;amp;roleTypeIdFrom=EMF_SPOUSE&amp;amp;roleTypeIdTo=EMF_SPOUSE&amp;amp;fromDate=2009-04-17 15:12:09.907&quot; onClick=&quot;return modalShow(this.href, 'Edit Relationship', 740);&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_edit.gif&quot; alt=&quot;Edit Relationship&quot; title=&quot;Edit Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="deleteButton" value="lt-x-lta href=&quot;/crm/control/deletePartyRelationship?partyId=10028&amp;amp;partyIdFrom=10031&amp;amp;partyIdTo=10028&amp;amp;roleTypeIdTo=EMF_SPOUSE&amp;amp;roleTypeIdFrom=EMF_SPOUSE&amp;amp;fromDate=2009-04-17 15:12:09.907&quot; onClick=&quot;return modalConfirm(this, 'Delete Confirmation', 'Are you sure you want to delete this relationship?');&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_delete.png&quot; alt=&quot;Delete Relationship&quot; title=&quot;Delete Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell></row>
+<row><cell name="partyNavId" value="10031"> </cell><cell name="partyHoverId" value="hc-party-10031"> </cell><cell name="viewButton" value="lt-x-ltimg  src=&quot;/emf-images/buttons/icon_view.png&quot; border=&quot;0&quot;/gt-x-gt"> </cell><cell name="partyIdConverse" value="Jeff  Buzbuzian "> </cell><cell name="roleDescription" value="Spouse"> </cell><cell name="fromDate" value="2009-04-17"> </cell><cell name="statusId" value="Active"> </cell><cell name="comments" value="Not Married"> </cell><cell name="editButton" value="lt-x-lta href=&quot;/crm/control/EditPartyRelationship?partyId=10028&amp;amp;partyIdFrom=10031&amp;amp;partyIdTo=10028&amp;amp;roleTypeIdFrom=EMF_SPOUSE&amp;amp;roleTypeIdTo=EMF_SPOUSE&amp;amp;fromDate=2009-04-17 15:12:09.907&quot; onClick=&quot;return modalShow(this.href, 'Edit Relationship', 740);&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_edit.gif&quot; alt=&quot;Edit Relationship&quot; title=&quot;Edit Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="deleteButton" value="lt-x-lta href=&quot;/crm/control/deletePartyRelationship?partyId=10028&amp;amp;partyIdFrom=10031&amp;amp;partyIdTo=10028&amp;amp;roleTypeIdTo=EMF_SPOUSE&amp;amp;roleTypeIdFrom=EMF_SPOUSE&amp;amp;fromDate=2009-04-17 15:12:09.907&quot; onClick=&quot;return modalConfirm(this, 'Delete Confirmation', 'Are you sure you want to delete this relationship?');&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_delete.png&quot; alt=&quot;Delete Relationship&quot; title=&quot;Delete Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell></row>
+</griddata>
+</span>
+<span id="gwf18" widget-type="custom.ClientGrid" grid-height="0" grid-width="0" scroll-mode="none" qtip-width="none" scrollbar-width="0" on-row-click="partyNav('{partyNavId}')" 
+        selection-model="none" row-numbers-enabled="false" on-row-double-click="none" page-size="15" show-group-columns="true" row-expander-template="none">
+</span>
+<span id="gwf8" widget-type="custom.ClientGrid" grid-height="0" grid-width="0" scroll-mode="none" qtip-width="none"
+    
+    scrollbar-width="0" on-row-click="partyNav('{partyNavId}')" on-row-double-click="none" page-size="15" 
+    show-group-columns="true" row-expander-template="none">
+<griddata>
+<column field="partyNavId" display="Party Nav Id" display-size="0" type="string" hidden="true" sortable="true" fixed="true" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="true" editable="false" row-click="false" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="partyHoverId" display="Party Hover Id" display-size="0" type="string" hidden="true" sortable="true" fixed="true" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="true" editable="false" row-click="false" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="viewButton" display=" " display-size="0" type="string" hidden="false" sortable="false" fixed="true" groupable="false" relative-width="60" absolute-width="35" auto-expand="false" grid-menu-disabled="true" editable="false" row-click="true" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="partyIdConverse" display="Name" display-size="0" type="string" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" row-click="true" tooltip="true" tooltip-template="none" tooltip-template-refid="{partyHoverId}"> </column>
+<column field="roleDescription" display="Type" display-size="25" type="string" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" row-click="true" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="fromDate" display="Since" display-size="25" type="date" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" row-click="true" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="statusId" display="Status" display-size="25" type="string" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" row-click="true" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="comments" display="Comments " display-size="25" type="string" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" row-click="true" tooltip="true" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="editButton" display=" " display-size="0" type="string" hidden="false" sortable="false" fixed="true" groupable="false" relative-width="60" absolute-width="35" auto-expand="false" grid-menu-disabled="true" editable="false" row-click="false" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="deleteButton" display=" " display-size="0" type="string" hidden="false" sortable="false" fixed="true" groupable="false" relative-width="60" absolute-width="35" auto-expand="false" grid-menu-disabled="true" editable="false" row-click="false" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<row>
+    <cell name="partyNavId" value="10031"> </cell><cell name="partyHoverId" value="hc-party-10031"> </cell><cell name="viewButton" value="lt-x-ltimg  src=&quot;/emf-images/buttons/icon_view.png&quot; border=&quot;0&quot;/gt-x-gt"> </cell><cell name="partyIdConverse" value="Jeff  Buzbuzian "> </cell><cell name="roleDescription" value="Spouse"> </cell><cell name="fromDate" value="2009-04-17"> </cell><cell name="statusId" value="Active"> </cell><cell name="comments" value="Not Married"> </cell><cell name="editButton" value="lt-x-lta href=&quot;/crm/control/EditPartyRelationship?partyId=10028&amp;amp;partyIdFrom=10031&amp;amp;partyIdTo=10028&amp;amp;roleTypeIdFrom=EMF_SPOUSE&amp;amp;roleTypeIdTo=EMF_SPOUSE&amp;amp;fromDate=2009-04-17 15:12:09.907&quot; onClick=&quot;return modalShow(this.href, 'Edit Relationship', 740);&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_edit.gif&quot; alt=&quot;Edit Relationship&quot; title=&quot;Edit Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="deleteButton" value="lt-x-lta href=&quot;/crm/control/deletePartyRelationship?partyId=10028&amp;amp;partyIdFrom=10031&amp;amp;partyIdTo=10028&amp;amp;roleTypeIdTo=EMF_SPOUSE&amp;amp;roleTypeIdFrom=EMF_SPOUSE&amp;amp;fromDate=2009-04-17 15:12:09.907&quot; onClick=&quot;return modalConfirm(this, 'Delete Confirmation', 'Are you sure you want to delete this relationship?');&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_delete.png&quot; alt=&quot;Delete Relationship&quot; title=&quot;Delete Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell>
+</row>
+</griddata>
+</span>
+<span id="gwf27" widget-type="custom.ClientGrid" grid-height="0" grid-width="0" scroll-mode="none" qtip-width="none" 
+    scrollbar-width="0" on-row-click="none" on-row-double-click="none" page-size="15" row-numberer="false" show-group-columns="true" row-expander-template="none">
+<griddata>
+<column field="partyId" display="Person" display-size="0" type="string" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false"> </column>
+<column field="fromDate" display="From Date" display-size="25" type="date" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="true"> </column>
+<column field="thruDate" display="Thru Date" display-size="25" type="date" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="true"> </column>
+<column field="statusId" display="Status" display-size="0" type="string" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" tooltip="true" tooltip-template=""> </column>
+<column field="enabled" display="Enabled" display-size="25" type="boolean" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="true"> </column>
+<column field="flag" display="Flag" display-size="25" type="boolean" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="true"> </column>
+<column field="test" display=" " display-size="0" type="string" hidden="true" sortable="true" fixed="true" groupable="false" relative-width="60" absolute-width="30" auto-expand="false" grid-menu-disabled="true" editable="false"> </column>
+<!--<column field="count" display="Amount" display-size="25" type="currency" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="true"> </column>-->
+<column field="editButton" display=" " display-size="0" type="string" hidden="false" sortable="false" fixed="true" groupable="false" relative-width="60" absolute-width="30" auto-expand="false" grid-menu-disabled="true" editable="false"> </column>
+<column field="deleteButton" display=" " display-size="0" type="string" hidden="false" sortable="false" fixed="true" groupable="false" relative-width="60" absolute-width="30" auto-expand="false" grid-menu-disabled="true" editable="false"> </column>
+<row>
+<cell name="partyId" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10179&amp;amp;externalLoginKey=EL430643324882&quot;gt-x-gtRita  Ray lt-x-lt/agt-x-gt"> </cell><cell name="fromDate" value="2009-04-14 21:36:36.971"> </cell>
+<cell name="thruDate" value="&amp;nbsp;"> </cell><cell name="statusId" value="Our office building will be 'on &quot;Card Access Only&quot; from Thursday at 7PM until Monday at 7AM. If you are coming in over the long weekend, make sure you have your building access card and your Chubb security code with you."> </cell>
+<cell name="enabled" value="true"> </cell>
+<cell name="flag" value="true"> </cell>
+<cell name="test" value="Hello there"> </cell>
+<!--<cell name="count" value="100"> </cell>-->
+<cell name="editButton" value="lt-x-lta href=&quot;/crm/control/EditContactListParty?contactListId=10000&amp;amp;partyId=10179&amp;amp;fromDate=2009-04-14 21:36:36.971&quot; onClick=&quot;return modalShow(this.href, 'Edit Contact List Person', 740);&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_edit.gif&quot; alt=&quot;Edit&quot; title=&quot;Edit&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell>
+<cell name="deleteButton" value="lt-x-lta href=&quot;/crm/control/&quot; onClick=&quot;return modalConfirmAndUpdate(this, 'Delete Confirmation', 'Are you sure you want to exclude this Person from Contact List?', 'deleteContactListParty?contactListId=10000&amp;partyId=10179&amp;fromDate=2009-04-14 21:36:36.971', 'Refreshing ...', 'ContactListContent', 'ContactListContent?contactListId=10000');&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_delete.png&quot; alt=&quot;Exclude&quot; title=&quot;Exclude&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell>
+</row>
+<row>
+<cell name="partyId" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10038&amp;amp;externalLoginKey=EL430643324882&quot;gt-x-gtJeff  Buzbuzian lt-x-lt/agt-x-gt"> </cell>
+<cell name="fromDate" value="2009-04-07 18:51:08.622"> </cell>
+<cell name="thruDate" value="&amp;nbsp;"> </cell>
+<cell name="statusId" value="In Use"> </cell>
+<cell name="enabled" value="true"> </cell>
+<cell name="flag" value="false"> </cell>
+<cell name="test" value="Hello there"> </cell>
+<!--<cell name="count" value="2400"> </cell>-->
+<cell name="editButton" value="lt-x-lta href=&quot;/crm/control/EditContactListParty?contactListId=10000&amp;amp;partyId=10038&amp;amp;fromDate=2009-04-07 18:51:08.622&quot; onClick=&quot;return modalShow(this.href, 'Edit Contact List Person', 740);&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_edit.gif&quot; alt=&quot;Edit&quot; title=&quot;Edit&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell>
+<cell name="deleteButton" value="lt-x-lta href=&quot;/crm/control/&quot; onClick=&quot;return modalConfirmAndUpdate(this, 'Delete Confirmation', 'Are you sure you want to exclude this Person from Contact List?', 'deleteContactListParty?contactListId=10000&amp;partyId=10038&amp;fromDate=2009-04-07 18:51:08.622', 'Refreshing ...', 'ContactListContent', 'ContactListContent?contactListId=10000');&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_delete.png&quot; alt=&quot;Exclude&quot; title=&quot;Exclude&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell>
+</row>
+<row>
+<cell name="partyId" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10000&amp;amp;externalLoginKey=EL430643324882&quot;gt-x-gtAmber E Klaehn lt-x-lt/agt-x-gt"> </cell>
+<cell name="fromDate" value="2009-04-07 18:50:50.311"> </cell>
+<cell name="thruDate" value="&amp;nbsp;"> </cell>
+<cell name="statusId" value="Pending Acceptance"> </cell>
+<cell name="enabled" value="false"> </cell>
+<cell name="flag" value="false"> </cell>
+<cell name="test" value="Hello there 2"> </cell>
+<!--<cell name="count" value="2205.30"> </cell>-->
+<cell name="editButton" value="lt-x-lta href=&quot;/crm/control/EditContactListParty?contactListId=10000&amp;amp;partyId=10000&amp;amp;fromDate=2009-04-07 18:50:50.311&quot; onClick=&quot;return modalShow(this.href, 'Edit Contact List Person', 740);&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_edit.gif&quot; alt=&quot;Edit&quot; title=&quot;Edit&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell>
+<cell name="deleteButton" value="lt-x-lta href=&quot;/crm/control/&quot; onClick=&quot;return modalConfirmAndUpdate(this, 'Delete Confirmation', 'Are you sure you want to exclude this Person from Contact List?', 'deleteContactListParty?contactListId=10000&amp;partyId=10000&amp;fromDate=2009-04-07 18:50:50.311', 'Refreshing ...', 'ContactListContent', 'ContactListContent?contactListId=10000');&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_delete.png&quot; alt=&quot;Exclude&quot; title=&quot;Exclude&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell>
+</row>
+</griddata>
+
+</span>
+<!-- 
+<table width="100%" border="2">
+   <tr>
+   <td class="label label100">Description</td>
+   <td colspan="3" class="field"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td width="1%">
+<table class="textAreaTable">
+   <tr>
+    <td>
+    <span widget-type="custom.TextArea" widgetId="foo" class="textAreaBox dojo-ResizableTextArea" name="description" characterWidth="67" visibleLines="4" remainingNotifId="gw1" maxLength="255" id="gwl4" tabindex="12">
+    <textarea  cols="67" rows="4"></textarea>
+    </span>
+    </td>
+   </tr>
+   <tr><td align="right"><span class="textAreaRemaining">Remaining Characters&nbsp;<span id="gw1">255</span></span></td></tr>
+</table>
+   </td><td width="99%"></td></tr></table></td>
+
+  </tr>
+  <tr>
+   <td class="label label100">Appraisal Desc.</td>
+   <td colspan="3" class="field"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td width="1%"><table class="textAreaTable"><tr><td><span widget-type="custom.TextArea"  widgetId="bar" class="textAreaBox dojo-ResizableTextArea" name="appraisalDescription" characterWidth="67" visibleLines="4" remainingNotifId="gw2" maxLength="4000" id="gwl5" tabindex="13"><textarea  cols="67" rows="4"></textarea></span></td></tr><tr><td align="right"><span class="textAreaRemaining">Remaining Characters&nbsp;<span id="gw2">4000</span></span></td></tr></table></td><td width="99%"></td></tr></table></td>
+  </tr>
+</table>
+<br/><br/><hr/><br/><br/>
+ -->
+<span id="tab" widget-type="custom.TabPanel" width="600px">
+<tabs>
+<tab title="Pie Chart" tab-widget-ref="pie1"> </tab>
+<tab title="Bar Chart" tab-widget-ref="bar1"> </tab>
+<tab title="Test HTML">
+This is a test of a web page
+</tab>
+<tab title="Grid test" tab-widget-ref="gwf104"> </tab>
+</tabs>
+</span>
+<span id="tab2" widget-type="gxt.TabPanel" width="600" height="400">
+    <span id="tabitem1" widget-type="gxt.TabItem" text="Pie Chart">
+        <span id="pie2" widget-type="chart.Chart" configId="pieconf1" dataId="chartdata1" onSingleSelect="chartSingleSelect" onMultipleSelect="chartMultiSelect">
+        </span>
+    </span>
+    <span id="tabitem2" widget-type="gxt.TabItem" text="Bar Chart">
+        <span id="bar2" widget-type="chart.Chart" configId="barconf1" dataId="chartdata1" onSingleSelect="chartSingleSelect" onMultipleSelect="chartMultiSelect">
+        </span>
+    </span>
+</span>
+<span id="evt1"  widget-type="custom.EventCallback" sync="false" sourceId="gwl4" event="change" jsCallback="txtCallback1"> </span>
+<span id="evt2"  widget-type="custom.EventCallback" sync="false" sourceId="gwl5" event="change" jsCallback="txtCallback2"> </span>
+<span id="evt3"  widget-type="custom.EventCallback" sync="false" sourceId="gwl4" event="change" jsCallback="txtCallback3"> </span>
+<span id="evt4"  widget-type="custom.EventCallback" sync="false" sourceId="gwl5" event="change" jsCallback="txtCallback4"> </span>
+<span id="evt-cfx"  widget-type="custom.EventCallback" sync="false" sourceId="f5" event="change" jsCallback="function(id,source, sourceElem, value) { alert('hello there'); }"> </span>
+<span id="evt-cf2"  widget-type="custom.EventCallback" sync="false" sourceId="f5" event="change" jsCallback="function(id,source, sourceElem, value) { alert('hello there'); }"> </span>
+<span id="evt-cf"  widget-type="custom.EventCallback" sync="false" sourceId="f5" event="change" 
+    jsCallback="document.getElementById('image-dd').selectedIndex = gwtCoverFlowGetSelectedImage('f5')"> </span>
+<span id="gwf9" widget-type="custom.ClientGrid" grid-height="0" grid-width="0" scroll-mode="none" scrollbar-width="0" page-size="15" show-group-columns="true" row-expander-template="none">
+<griddata>
+<column field="contentName" display="Attachments" display-size="25" type="string" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" tooltip="false"> </column>
+<row>
+<cell name="contentName" value="&amp;nbsp;"> </cell>
+</row>
+<row>
+<cell name="contentName" value="alfa-romeo-8c-spider1.jpg"> </cell>
+</row>
+</griddata>
+</span>
+
+<span id="gwf4" widget-type="custom.ClientGrid" grid-height="0" grid-width="0" scroll-mode="none" qtip-width="400" scrollbar-width="0" on-row-click="partyNav('{partyNavId}')" page-size="15" show-group-columns="true" row-expander-template="none">
+<griddata>
+<column field="partyNavId" display="Party Nav Id" display-size="0" type="string" hidden="true" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="true" editable="false" row-click="true" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="partyHoverId" display="Party Hover Id" display-size="0" type="string" hidden="true" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="true" editable="false" row-click="true" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="viewButton" display=" " display-size="0" type="string" hidden="false" sortable="false" fixed="true" groupable="false" relative-width="60" absolute-width="35" auto-expand="false" grid-menu-disabled="true" editable="false" row-click="true" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="partyIdConverse" display="Name" display-size="0" type="string" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" row-click="true" tooltip="true" tooltip-template="none" tooltip-template-refid="{partyHoverId}"> </column>
+<column field="roleDescription" display="Type" display-size="25" type="string" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" row-click="true" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="fromDate" display="Since" display-size="25" type="date" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" row-click="true" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="statusId" display="Status" display-size="25" type="string" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" row-click="true" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="comments" display="Comments " display-size="25" type="string" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" row-click="true" tooltip="true" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="editButton" display=" " display-size="0" type="string" hidden="false" sortable="false" fixed="true" groupable="false" relative-width="60" absolute-width="35" auto-expand="false" grid-menu-disabled="true" editable="false" row-click="false" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<column field="deleteButton" display=" " display-size="0" type="string" hidden="false" sortable="false" fixed="true" groupable="false" relative-width="60" absolute-width="35" auto-expand="false" grid-menu-disabled="true" editable="false" row-click="true" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column>
+<row><cell name="partyNavId" value=""> </cell><cell name="partyHoverId" value="hc-party-10038"> </cell><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10038&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="partyIdConverse" value="Jeff  Buzbuzian "> </cell><cell name="roleDescription" value="Spouse"> </cell><cell name="fromDate" value="2009-04-09"> </cell><cell name="statusId" value="Active"> </cell><cell name="comments" value="They are not married"> </cell><cell name="editButton" value="lt-x-lta href=&quot;/crm/control/EditPartyRelationship?partyId=10000&amp;amp;partyIdFrom=10038&amp;amp;partyIdTo=10000&amp;amp;roleTypeIdFrom=EMF_SPOUSE&amp;amp;roleTypeIdTo=EMF_SPOUSE&amp;amp;fromDate=2009-04-09 15:50:06.251&quot; onClick=&quot;return modalShow(this.href, 'Edit Relationship', 740);&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_edit.gif&quot; alt=&quot;Edit Relationship&quot; title=&quot;Edit Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="deleteButton" value="lt-x-lta href=&quot;/crm/control/deletePartyRelationship?partyId=10000&amp;amp;partyIdFrom=10038&amp;amp;partyIdTo=10000&amp;amp;roleTypeIdTo=EMF_SPOUSE&amp;amp;roleTypeIdFrom=EMF_SPOUSE&amp;amp;fromDate=2009-04-09 15:50:06.251&quot; onClick=&quot;return modalConfirm(this, 'Delete Confirmation', 'Are you sure you want to delete this relationship?');&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_delete.png&quot; alt=&quot;Delete Relationship&quot; title=&quot;Delete Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell></row><row><cell name="partyNavId" value=""> </cell><cell name="partyHoverId" value="hc-party-10038"> </cell><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10038&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="partyIdConverse" value="Jeff  Buzbuzian "> </cell><cell name="roleDescription" value="Employer"> </cell><cell name="fromDate" value="2009-04-07"> </cell><cell name="statusId" value="Active"> </cell><cell name="comments" value="&amp;nbsp;"> </cell><cell name="editButton" value="lt-x-lta href=&quot;/crm/control/EditPartyRelationship?partyId=10000&amp;amp;partyIdFrom=10038&amp;amp;partyIdTo=10000&amp;amp;roleTypeIdFrom=EMF_EMPLOYER&amp;amp;roleTypeIdTo=EMF_EMPLOYEE&amp;amp;fromDate=2009-04-07 13:49:28.203&quot; onClick=&quot;return modalShow(this.href, 'Edit Relationship', 740);&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_edit.gif&quot; alt=&quot;Edit Relationship&quot; title=&quot;Edit Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="deleteButton" value="lt-x-lta href=&quot;/crm/control/deletePartyRelationship?partyId=10000&amp;amp;partyIdFrom=10038&amp;amp;partyIdTo=10000&amp;amp;roleTypeIdTo=EMF_EMPLOYEE&amp;amp;roleTypeIdFrom=EMF_EMPLOYER&amp;amp;fromDate=2009-04-07 13:49:28.203&quot; onClick=&quot;return modalConfirm(this, 'Delete Confirmation', 'Are you sure you want to delete this relationship?');&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_delete.png&quot; alt=&quot;Delete Relationship&quot; title=&quot;Delete Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell></row><row><cell name="partyNavId" value=""> </cell><cell name="partyHoverId" value="hc-party-10002"> </cell><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10002&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="partyIdConverse" value="   Emforium Group Inc."> </cell><cell name="roleDescription" value="Employer"> </cell><cell name="fromDate" value="2008-06-01"> </cell><cell name="statusId" value="Active"> </cell><cell name="comments" value="&amp;nbsp;"> </cell><cell name="editButton" value="lt-x-lta href=&quot;/crm/control/EditPartyRelationship?partyId=10000&amp;amp;partyIdFrom=10000&amp;amp;partyIdTo=10002&amp;amp;roleTypeIdFrom=EMF_EMPLOYEE&amp;amp;roleTypeIdTo=EMF_EMPLOYER&amp;amp;fromDate=2008-06-01 00:00:00.000&quot; onClick=&quot;return modalShow(this.href, 'Edit Relationship', 740);&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_edit.gif&quot; alt=&quot;Edit Relationship&quot; title=&quot;Edit Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="deleteButton" value="lt-x-lta href=&quot;/crm/control/deletePartyRelationship?partyId=10000&amp;amp;partyIdFrom=10000&amp;amp;partyIdTo=10002&amp;amp;roleTypeIdTo=EMF_EMPLOYER&amp;amp;roleTypeIdFrom=EMF_EMPLOYEE&amp;amp;fromDate=2008-06-01 00:00:00.000&quot; onClick=&quot;return modalConfirm(this, 'Delete Confirmation', 'Are you sure you want to delete this relationship?');&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_delete.png&quot; alt=&quot;Delete Relationship&quot; title=&quot;Delete Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell></row><row><cell name="partyNavId" value=""> </cell><cell name="partyHoverId" value="hc-party-10036"> </cell><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10036&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="partyIdConverse" value="Lee A Fitzgerald "> </cell><cell name="roleDescription" value="Client"> </cell><cell name="fromDate" value="2009-04-16"> </cell><cell name="statusId" value="Active"> </cell><cell name="comments" value="&amp;nbsp;"> </cell><cell name="editButton" value="lt-x-lta href=&quot;/crm/control/EditPartyRelationship?partyId=10000&amp;amp;partyIdFrom=10000&amp;amp;partyIdTo=10036&amp;amp;roleTypeIdFrom=EMF_P_EMPLOYEE&amp;amp;roleTypeIdTo=EMF_CLIENT&amp;amp;fromDate=2009-04-16 16:45:28.049&quot; onClick=&quot;return modalShow(this.href, 'Edit Relationship', 740);&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_edit.gif&quot; alt=&quot;Edit Relationship&quot; title=&quot;Edit Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="deleteButton" value="lt-x-lta href=&quot;/crm/control/deletePartyRelationship?partyId=10000&amp;amp;partyIdFrom=10000&amp;amp;partyIdTo=10036&amp;amp;roleTypeIdTo=EMF_CLIENT&amp;amp;roleTypeIdFrom=EMF_P_EMPLOYEE&amp;amp;fromDate=2009-04-16 16:45:28.049&quot; onClick=&quot;return modalConfirm(this, 'Delete Confirmation', 'Are you sure you want to delete this relationship?');&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_delete.png&quot; alt=&quot;Delete Relationship&quot; title=&quot;Delete Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell></row><row><cell name="partyNavId" value=""> </cell><cell name="partyHoverId" value="hc-party-10047"> </cell><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10047&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="partyIdConverse" value="Greg  Buzbuzian "> </cell><cell name="roleDescription" value="Employee"> </cell><cell name="fromDate" value="2009-04-06"> </cell><cell name="statusId" value="Active"> </cell><cell name="comments" value="New relationship"> </cell><cell name="editButton" value="lt-x-lta href=&quot;/crm/control/EditPartyRelationship?partyId=10000&amp;amp;partyIdFrom=10000&amp;amp;partyIdTo=10047&amp;amp;roleTypeIdFrom=EMF_EMPLOYER&amp;amp;roleTypeIdTo=EMF_EMPLOYEE&amp;amp;fromDate=2009-04-06 16:02:35.347&quot; onClick=&quot;return modalShow(this.href, 'Edit Relationship', 740);&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_edit.gif&quot; alt=&quot;Edit Relationship&quot; title=&quot;Edit Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="deleteButton" value="lt-x-lta href=&quot;/crm/control/deletePartyRelationship?partyId=10000&amp;amp;partyIdFrom=10000&amp;amp;partyIdTo=10047&amp;amp;roleTypeIdTo=EMF_EMPLOYEE&amp;amp;roleTypeIdFrom=EMF_EMPLOYER&amp;amp;fromDate=2009-04-06 16:02:35.347&quot; onClick=&quot;return modalConfirm(this, 'Delete Confirmation', 'Are you sure you want to delete this relationship?');&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_delete.png&quot; alt=&quot;Delete Relationship&quot; title=&quot;Delete Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell></row><row><cell name="partyNavId" value=""> </cell><cell name="partyHoverId" value="hc-party-10047"> </cell><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10047&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="partyIdConverse" value="Greg  Buzbuzian "> </cell><cell name="roleDescription" value="Referree"> </cell><cell name="fromDate" value="2009-04-06"> </cell><cell name="statusId" value="Active"> </cell><cell name="comments" value="&amp;nbsp;"> </cell><cell name="editButton" value="lt-x-lta href=&quot;/crm/control/EditPartyRelationship?partyId=10000&amp;amp;partyIdFrom=10000&amp;amp;partyIdTo=10047&amp;amp;roleTypeIdFrom=EMF_REFERRER&amp;amp;roleTypeIdTo=EMF_REFERREE&amp;amp;fromDate=2009-04-06 16:07:12.525&quot; onClick=&quot;return modalShow(this.href, 'Edit Relationship', 740);&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_edit.gif&quot; alt=&quot;Edit Relationship&quot; title=&quot;Edit Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="deleteButton" value="lt-x-lta href=&quot;/crm/control/deletePartyRelationship?partyId=10000&amp;amp;partyIdFrom=10000&amp;amp;partyIdTo=10047&amp;amp;roleTypeIdTo=EMF_REFERREE&amp;amp;roleTypeIdFrom=EMF_REFERRER&amp;amp;fromDate=2009-04-06 16:07:12.525&quot; onClick=&quot;return modalConfirm(this, 'Delete Confirmation', 'Are you sure you want to delete this relationship?');&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_delete.png&quot; alt=&quot;Delete Relationship&quot; title=&quot;Delete Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell></row><row><cell name="partyNavId" value=""> </cell><cell name="partyHoverId" value="hc-party-10140"> </cell><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10140&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="partyIdConverse" value="Test  Andrei "> </cell><cell name="roleDescription" value="Employee"> </cell><cell name="fromDate" value="2009-04-08"> </cell><cell name="statusId" value="Active"> </cell><cell name="comments" value="Amazing"> </cell><cell name="editButton" value="lt-x-lta href=&quot;/crm/control/EditPartyRelationship?partyId=10000&amp;amp;partyIdFrom=10000&amp;amp;partyIdTo=10140&amp;amp;roleTypeIdFrom=EMF_EMPLOYER&amp;amp;roleTypeIdTo=EMF_EMPLOYEE&amp;amp;fromDate=2009-04-08 16:45:28.914&quot; onClick=&quot;return modalShow(this.href, 'Edit Relationship', 740);&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_edit.gif&quot; alt=&quot;Edit Relationship&quot; title=&quot;Edit Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="deleteButton" value="lt-x-lta href=&quot;/crm/control/deletePartyRelationship?partyId=10000&amp;amp;partyIdFrom=10000&amp;amp;partyIdTo=10140&amp;amp;roleTypeIdTo=EMF_EMPLOYEE&amp;amp;roleTypeIdFrom=EMF_EMPLOYER&amp;amp;fromDate=2009-04-08 16:45:28.914&quot; onClick=&quot;return modalConfirm(this, 'Delete Confirmation', 'Are you sure you want to delete this relationship?');&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_delete.png&quot; alt=&quot;Delete Relationship&quot; title=&quot;Delete Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell></row><row><cell name="partyNavId" value=""> </cell><cell name="partyHoverId" value="hc-party-DemoEmployee3"> </cell><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=DemoEmployee3&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="partyIdConverse" value="Tom  Analist2 "> </cell><cell name="roleDescription" value="Referree"> </cell><cell name="fromDate" value="2009-04-16"> </cell><cell name="statusId" value="Active"> </cell><cell name="comments" value="&amp;nbsp;"> </cell><cell name="editButton" value="lt-x-lta href=&quot;/crm/control/EditPartyRelationship?partyId=10000&amp;amp;partyIdFrom=10000&amp;amp;partyIdTo=DemoEmployee3&amp;amp;roleTypeIdFrom=EMF_REFERRER&amp;amp;roleTypeIdTo=EMF_REFERREE&amp;amp;fromDate=2009-04-16 12:01:36.038&quot; onClick=&quot;return modalShow(this.href, 'Edit Relationship', 740);&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_edit.gif&quot; alt=&quot;Edit Relationship&quot; title=&quot;Edit Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="deleteButton" value="lt-x-lta href=&quot;/crm/control/deletePartyRelationship?partyId=10000&amp;amp;partyIdFrom=10000&amp;amp;partyIdTo=DemoEmployee3&amp;amp;roleTypeIdTo=EMF_REFERREE&amp;amp;roleTypeIdFrom=EMF_REFERRER&amp;amp;fromDate=2009-04-16 12:01:36.038&quot; onClick=&quot;return modalConfirm(this, 'Delete Confirmation', 'Are you sure you want to delete this relationship?');&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_delete.png&quot; alt=&quot;Delete Relationship&quot; title=&quot;Delete Relationship&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell></row></griddata>
+</span>
+
+<span id="gwf1" widget-type="custom.ClientPagedGrid" grid-height="0" grid-width="0" scroll-mode="none" qtip-width="none" scrollbar-width="0" on-row-click="none" page-size="15" show-group-columns="true" row-expander-template="none">
+<griddata><column field="viewButton" display=" " display-size="0" type="string" hidden="false" sortable="false" fixed="true" groupable="false" relative-width="60" absolute-width="35" auto-expand="false" grid-menu-disabled="true" editable="false" row-click="false" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column><column field="lastName" display="Last Name" display-size="25" type="string" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" row-click="true" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column><column field="firstName" display="First Name" display-size="25" type="string" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" row-click="true" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column><column field="groupName" display="Company Name" display-size="25" type="string" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" row-click="true" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column><column field="phone" display="Phone" display-size="25" type="string" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" row-click="true" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column><column field="address" display="Address" display-size="25" type="string" hidden="false" sortable="true" fixed="false" groupable="false" relative-width="60" absolute-width="-1" auto-expand="false" grid-menu-disabled="false" editable="false" row-click="true" tooltip="false" tooltip-template="none" tooltip-template-refid="none"> </column><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=DemoEmployee2&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Analist1"> </cell><cell name="firstName" value="Jo"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="401 Central Street   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=DemoEmployee3&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Analist2"> </cell><cell name="firstName" value="Tom"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="401 Wahda Street City Centre Dubai AB CAN 40324"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10140&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Andrei"> </cell><cell name="firstName" value="Test"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10040&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Borges"> </cell><cell name="firstName" value="Angela"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="1 519 5760616"> </cell><cell name="address" value="401 Wahda Street City Centre Dubai AB CAN 40324"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10047&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Buzbuzian"> </cell><cell name="firstName" value="Greg"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="56 St. George's Square  Guelph ON CAN N1H 4E6"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10038&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Buzbuzian"> </cell><cell name="firstName" value="Jeff"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="1 519 2219200"> </cell><cell name="address" value="56 St. George's Square  Guelph ON CAN N1H 4E6"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10160&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Cary"> </cell><cell name="firstName" value="Joceyln"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="1 646 7248498"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10075&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Coolname"> </cell><cell name="firstName" value="Ice"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=DemoCustomer1&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Customer 1"> </cell><cell name="firstName" value="ManagerP1"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="&amp;nbsp;"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=DemoCustomer3&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Customer 2"> </cell><cell name="firstName" value="Billing"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="&amp;nbsp;"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=DemoCustomer2&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Customer 2"> </cell><cell name="firstName" value="ManagerP2"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="&amp;nbsp;"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10156&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Fitzgerald"> </cell><cell name="firstName" value="Jack"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   ON CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10036&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Fitzgerald"> </cell><cell name="firstName" value="Lee"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="1 519 6536042"> </cell><cell name="address" value="203 Corrie Crs  Waterloo ON CAN N2L 5W3"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10887&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Fitzgerald"> </cell><cell name="firstName" value="Rae"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="&amp;nbsp;"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10069&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Franklin"> </cell><cell name="firstName" value="Benjamin"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="1 227 4454455"> </cell><cell name="address" value="13 Regent Street London England _NA_ GBR EIIR"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10175&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Gates"> </cell><cell name="firstName" value="Melinda"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   NY USA "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10174&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Gates"> </cell><cell name="firstName" value="William"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="1 462 0672050"> </cell><cell name="address" value="  Seattle NY USA "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10074&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Johnson"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10000&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Klaehn"> </cell><cell name="firstName" value="Amber"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="1 519 8292609"> </cell><cell name="address" value="210 Woolwich Street  Guelph ON CAN N1H 3V7"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10172&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Lai"> </cell><cell name="firstName" value="Jonathan"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   ON CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10153&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Lazarus"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   ON CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10164&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Maathai"> </cell><cell name="firstName" value="Wangari"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="  Nairobi _NA_ KEN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10029&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="May"> </cell><cell name="firstName" value="Darrell"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="1 519 7463352"> </cell><cell name="address" value="453 Lake Louise Blvd  Waterloo ON CAN N2V2K6"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10005&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Morin"> </cell><cell name="firstName" value="Alexandre"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10004&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Morin"> </cell><cell name="firstName" value="Andree"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10003&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Morin"> </cell><cell name="firstName" value="Lori"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10001&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Morin"> </cell><cell name="firstName" value="Marc"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="1 519 7471970"> </cell><cell name="address" value="123 Country Lane  Back Country AB CAN H0H 0H0"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10103&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="NewWithLinks"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="1 454 5454454"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10188&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="ObAMA"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="1 444 4444444"> </cell><cell name="address" value="   WA USA "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10161&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Oosterveld"> </cell><cell name="firstName" value="Mike"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="210 Woolwich Street  Guelph ON CAN N1H 3V7"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10049&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Platz"> </cell><cell name="firstName" value="Gerwin"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="Some Street  Pforzheim _NA_ DEU D-75172"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10144&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Ray"> </cell><cell name="firstName" value="Gaurav"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="  Bangkok _NA_ THA "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10179&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Ray"> </cell><cell name="firstName" value="Rita"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="3 Harivansh Rai Villa Juhu Mumbai IN-MH IND "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10137&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Riddle"> </cell><cell name="firstName" value="Tom"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="Godric Griffinder's Hollow Central London London _NA_ GBR VOLDEMORT"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10138&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Riddle"> </cell><cell name="firstName" value="Tom"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="Godric Griffinder's Hollow Central London London _NA_ GBR VOLDEMORT"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10163&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Riddle"> </cell><cell name="firstName" value="Tom"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="Godric Griffinder's Hollow Central London London _NA_ GBR VOLDEMORT"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10142&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Sedra"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="  Waterloo ON CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10155&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Smith"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10186&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Stevenson"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="&amp;nbsp;"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10053&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="TENNYSON"> </cell><cell name="firstName" value="LORD ALFRRED"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10073&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Test7"> </cell><cell name="firstName" value="Test7"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   ON CAN t1s2r4"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10136&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Testbuild"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10187&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Tester"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="&amp;nbsp;"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10050&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Testonson"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10173&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="Vunderbar"> </cell><cell name="firstName" value="Heinz"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="1 519 8292609"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10051&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="c1-lname"> </cell><cell name="firstName" value="c1-fname"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10134&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="test"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="&amp;nbsp;"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10002&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="&amp;nbsp;"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="Emforium Group Inc."> </cell><cell name="phone" value="1 519 7726824"> </cell><cell name="address" value="180 King Street South, Unit 300   Waterloo ON CAN N2J 1P8"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10006&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="&amp;nbsp;"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="Emforium Group"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10043&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="&amp;nbsp;"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="Chubb"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10071&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="&amp;nbsp;"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="Alfa Romeo"> </cell><cell name="phone" value="1 278 7987979"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10078&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="&amp;nbsp;"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="Google Inc."> </cell><cell name="phone" value="1 714 2853555"> </cell><cell name="address" value="  Kirkland WA USA "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10135&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="&amp;nbsp;"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="foo"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10139&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="&amp;nbsp;"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="Just One Name"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10151&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="&amp;nbsp;"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="Google UAE"> </cell><cell name="phone" value="1 800 0000000"> </cell><cell name="address" value="Dubai Internet City Building 9 office 220/221 Dubai _NA_ ARE 50296"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10152&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="&amp;nbsp;"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="Google "> </cell><cell name="phone" value="1 044 3376800"> </cell><cell name="address" value="  Kabul _NA_ AND "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10154&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="&amp;nbsp;"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="Joe Customer"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   AB CAN "> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10165&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="&amp;nbsp;"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="IBM"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="  Markham ON CAN 4546546"> </cell></row><row><cell name="viewButton" value="lt-x-lta href=&quot;/crm/control/viewprofile?partyId=10176&quot;gt-x-gtlt-x-ltimg src=&quot;/emf-images/buttons/icon_view.png&quot; alt=&quot;View This Customer&quot; title=&quot;View This Customer&quot; border=&quot;0&quot;gt-x-gtlt-x-lt/agt-x-gt"> </cell><cell name="lastName" value="&amp;nbsp;"> </cell><cell name="firstName" value="&amp;nbsp;"> </cell><cell name="groupName" value="Microsoft"> </cell><cell name="phone" value="&amp;nbsp;"> </cell><cell name="address" value="   NY USA "> </cell></row></griddata>
+</span>
+
+<span id="evt-chart"  widget-type="custom.EventCallback" sync="false" sourceId="table1" event="select" jsCallback="chartSelection"> </span>
+<div id="gwteventids" list=""></div>
+<div id="gwtfieldids2" list="pieconf1,barconf1,lineconf1,chartdata1,pie1,bar1,line1"></div>
+<div id="gwtfieldids4" list="barconf1,chartdata1,bar1"></div>
+<div id="gwtfieldidsx" list="pieconf1,barconf1,lineconf1,columnconf1,chartdata1,pie1,bar1,line1,column1"></div>
+<div id="gwtfieldidsy" list="pieconf1,barconf1,lineconf1,columnconf1,scatterconf1,areaconf1,orgconf1,motionconf1,tlconf1,tldata1,tl1,motiondata1,chartdata1,orgdata1,pie1,bar1,line1,column1,scatter1,area1,org1,motion1"></div>
+<div id="gwtfieldids-x" list="pieconf1,barconf1,chartdata1,pie2,bar2,tabitem1,tabitem2,tab2"></div>
+<div id="gwtfieldids" list="gwf8"></div>
+<div id="gwtnodeids" list=""></div>
+
+
+<hovercache><span id="hc-party-10002" value="lt-x-ltdiv class=&quot;modal-screenlet&quot;gt-x-gt
+
+
+
+lt-x-lttable class=&quot;zimlet-table&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; width=&quot;100%&quot;gt-x-gt
+    lt-x-lttrgt-x-gtlt-x-lttd align=&quot;center&quot;gt-x-gt
+        lt-x-lth3 class=&quot;title&quot;gt-x-gtCustomer Detailslt-x-lt/h3gt-x-gt
+    lt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gt
+    lt-x-lttr valign=&quot;center&quot;gt-x-gtlt-x-lttd align=&quot;left&quot;gt-x-gt
+        lt-x-ltdiv style=&quot;border-top: 1px solid black; border-bottom: 1px solid black; white-space:nowrap;&quot;gt-x-gt
+        lt-x-lttable class=&quot;zimlet-table&quot; cellpadding=&quot;3&quot; cellspacing=&quot;3&quot; border=&quot;0&quot; width=&quot;100%&quot;gt-x-gt
+        lt-x-lttrgt-x-gtlt-x-lttdgt-x-gt
+            
+lt-x-ltform method=&quot;post&quot;  action=&quot;&quot;  id=&quot;ViewParty&quot; class=&quot;basic-form&quot; onSubmit=&quot;javascript:return submitFormDisableSubmits(this)&quot; name=&quot;ViewParty&quot;gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;nameDisplay&quot; value=&quot;Emforium Group Inc.&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;customerId&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;primaryPhoneDisplay&quot; value=&quot;1 (519) 772-6824&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;birthDate&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;primaryAddressDisplay&quot; value=&quot;180 King Street South, Unit 300 &amp;lt;br/&amp;gt;Waterloo, ON&amp;lt;br/&amp;gt;CAN N2J 1P8&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;age2&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;primaryEmailDisplay&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;status&quot;/gt-x-gt
+lt-x-ltdiv class=&quot;fieldgroup&quot; id=&quot;_G370_&quot;gt-x-gtlt-x-ltdiv class=&quot;fieldgroup-title-bar&quot;gt-x-gtlt-x-lttablegt-x-gtlt-x-lttrgt-x-gtlt-x-lttd class=&quot;collapse&quot;gt-x-gtlt-x-lt/tdgt-x-gtlt-x-lttdgt-x-gtlt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gtlt-x-lt/tablegt-x-gtlt-x-lt/divgt-x-gtlt-x-ltdiv id=&quot;_G370__body&quot; class=&quot;fieldgroup-body&quot;gt-x-gt lt-x-lttable cellspacing=&quot;0&quot; class=&quot;basic-table&quot;gt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtNamelt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gtEmforium Group Inc.lt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtCustomer Idlt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt10002lt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtPhonelt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt1 (519) 772-6824lt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtBirth Datelt-x-lt/tdgt-x-gt
+   lt-x-lttd colspan=&quot;3&quot; class=&quot;basic-info-content&quot;gt-x-gt&amp;nbsp;lt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtAddresslt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt180 King Street South, Unit 300 lt-x-ltbr/gt-x-gtWaterloo, ONlt-x-ltbr/gt-x-gtCAN N2J 1P8lt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtAgelt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt&amp;nbsp;lt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtEmaillt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt&amp;nbsp;lt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtStatuslt-x-lt/tdgt-x-gt
+   lt-x-lttd colspan=&quot;3&quot; class=&quot;basic-info-content&quot;gt-x-gtEnabledlt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+ lt-x-lt/tablegt-x-gt
+lt-x-lt/divgt-x-gtlt-x-lt/divgt-x-gtlt-x-lt/formgt-x-gt
+
+
+        lt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gt
+        lt-x-lt/tablegt-x-gt
+        lt-x-lt/divgt-x-gt
+    lt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gt
+lt-x-lt/tablegt-x-gt
+
+
+lt-x-lt/divgt-x-gt"> </span><span id="hc-party-DemoEmployee3" value="lt-x-ltdiv class=&quot;modal-screenlet&quot;gt-x-gt
+
+
+
+lt-x-lttable class=&quot;zimlet-table&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; width=&quot;100%&quot;gt-x-gt
+    lt-x-lttrgt-x-gtlt-x-lttd align=&quot;center&quot;gt-x-gt
+        lt-x-lth3 class=&quot;title&quot;gt-x-gtCustomer Detailslt-x-lt/h3gt-x-gt
+    lt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gt
+    lt-x-lttr valign=&quot;center&quot;gt-x-gtlt-x-lttd align=&quot;left&quot;gt-x-gt
+        lt-x-ltdiv style=&quot;border-top: 1px solid black; border-bottom: 1px solid black; white-space:nowrap;&quot;gt-x-gt
+        lt-x-lttable class=&quot;zimlet-table&quot; cellpadding=&quot;3&quot; cellspacing=&quot;3&quot; border=&quot;0&quot; width=&quot;100%&quot;gt-x-gt
+        lt-x-lttrgt-x-gtlt-x-lttdgt-x-gt
+            
+lt-x-ltform method=&quot;post&quot;  action=&quot;&quot;  id=&quot;ViewParty&quot; class=&quot;basic-form&quot; onSubmit=&quot;javascript:return submitFormDisableSubmits(this)&quot; name=&quot;ViewParty&quot;gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;nameDisplay&quot; value=&quot;Tom Analist2&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;employeeId&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;primaryPhoneDisplay&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;birthDate&quot; value=&quot;2005-04-15&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;primaryAddressDisplay&quot; value=&quot;401 Wahda Street&amp;lt;br/&amp;gt;City Centre&amp;lt;br/&amp;gt;Dubai, AB&amp;lt;br/&amp;gt;CAN 40324&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;age&quot; value=&quot;4&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;primaryEmailDisplay&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;status&quot;/gt-x-gt
+lt-x-ltdiv class=&quot;fieldgroup&quot; id=&quot;_G370_&quot;gt-x-gtlt-x-ltdiv class=&quot;fieldgroup-title-bar&quot;gt-x-gtlt-x-lttablegt-x-gtlt-x-lttrgt-x-gtlt-x-lttd class=&quot;collapse&quot;gt-x-gtlt-x-lt/tdgt-x-gtlt-x-lttdgt-x-gtlt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gtlt-x-lt/tablegt-x-gtlt-x-lt/divgt-x-gtlt-x-ltdiv id=&quot;_G370__body&quot; class=&quot;fieldgroup-body&quot;gt-x-gt lt-x-lttable cellspacing=&quot;0&quot; class=&quot;basic-table&quot;gt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtNamelt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gtTom Analist2lt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtEmployee Idlt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gtTomlt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtPhonelt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt&amp;nbsp;lt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtBirth Datelt-x-lt/tdgt-x-gt
+   lt-x-lttd colspan=&quot;3&quot; class=&quot;basic-info-content&quot;gt-x-gt2005-04-15lt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtAddresslt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt401 Wahda Streetlt-x-ltbr/gt-x-gtCity Centrelt-x-ltbr/gt-x-gtDubai, ABlt-x-ltbr/gt-x-gtCAN 40324lt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtAgelt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt4 years oldlt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtEmaillt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt&amp;nbsp;lt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtStatuslt-x-lt/tdgt-x-gt
+   lt-x-lttd colspan=&quot;3&quot; class=&quot;basic-info-content&quot;gt-x-gtEnabledlt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+ lt-x-lt/tablegt-x-gt
+lt-x-lt/divgt-x-gtlt-x-lt/divgt-x-gtlt-x-lt/formgt-x-gt
+
+
+        lt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gt
+        lt-x-lt/tablegt-x-gt
+        lt-x-lt/divgt-x-gt
+    lt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gt
+lt-x-lt/tablegt-x-gt
+
+
+lt-x-lt/divgt-x-gt"> </span><span id="hc-party-10036" value="lt-x-ltdiv class=&quot;modal-screenlet&quot;gt-x-gt
+
+
+
+lt-x-lttable class=&quot;zimlet-table&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; width=&quot;100%&quot;gt-x-gt
+    lt-x-lttrgt-x-gtlt-x-lttd align=&quot;center&quot;gt-x-gt
+        lt-x-lth3 class=&quot;title&quot;gt-x-gtCustomer Detailslt-x-lt/h3gt-x-gt
+    lt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gt
+    lt-x-lttr valign=&quot;center&quot;gt-x-gtlt-x-lttd align=&quot;left&quot;gt-x-gt
+        lt-x-ltdiv style=&quot;border-top: 1px solid black; border-bottom: 1px solid black; white-space:nowrap;&quot;gt-x-gt
+        lt-x-lttable class=&quot;zimlet-table&quot; cellpadding=&quot;3&quot; cellspacing=&quot;3&quot; border=&quot;0&quot; width=&quot;100%&quot;gt-x-gt
+         lt-x-lttrgt-x-gtlt-x-lttd class=&quot;cell-value&quot; align=&quot;center&quot;gt-x-gt
+            lt-x-ltimg src=&quot;http://immutable.emforium.com/public/57412bb2f57d4e4856b148b3787300ef.jpeg&quot; width=&quot;100&quot; height=&quot;150&quot;/gt-x-gt
+         lt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gt
+        lt-x-lttrgt-x-gtlt-x-lttdgt-x-gt
+            
+lt-x-ltform method=&quot;post&quot;  action=&quot;&quot;  id=&quot;ViewParty&quot; class=&quot;basic-form&quot; onSubmit=&quot;javascript:return submitFormDisableSubmits(this)&quot; name=&quot;ViewParty&quot;gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;nameDisplay&quot; value=&quot;Mr Lee A Fitzgerald&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;customerId&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;primaryPhoneDisplay&quot; value=&quot;1 (519) 653-6042&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;birthDate&quot; value=&quot;1975-06-06&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;primaryAddressDisplay&quot; value=&quot;203 Corrie Crs&amp;lt;br/&amp;gt;Waterloo, ON&amp;lt;br/&amp;gt;CAN N2L 5W3&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;age&quot; value=&quot;33&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;primaryEmailDisplay&quot; value=&quot;lfitzgerald@emforium.com&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;status&quot;/gt-x-gt
+lt-x-ltdiv class=&quot;fieldgroup&quot; id=&quot;_G370_&quot;gt-x-gtlt-x-ltdiv class=&quot;fieldgroup-title-bar&quot;gt-x-gtlt-x-lttablegt-x-gtlt-x-lttrgt-x-gtlt-x-lttd class=&quot;collapse&quot;gt-x-gtlt-x-lt/tdgt-x-gtlt-x-lttdgt-x-gtlt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gtlt-x-lt/tablegt-x-gtlt-x-lt/divgt-x-gtlt-x-ltdiv id=&quot;_G370__body&quot; class=&quot;fieldgroup-body&quot;gt-x-gt lt-x-lttable cellspacing=&quot;0&quot; class=&quot;basic-table&quot;gt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtNamelt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gtMr Lee A Fitzgeraldlt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtCustomer Idlt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt10036lt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtPhonelt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt1 (519) 653-6042lt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtBirth Datelt-x-lt/tdgt-x-gt
+   lt-x-lttd colspan=&quot;3&quot; class=&quot;basic-info-content&quot;gt-x-gt1975-06-06lt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtAddresslt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt203 Corrie Crslt-x-ltbr/gt-x-gtWaterloo, ONlt-x-ltbr/gt-x-gtCAN N2L 5W3lt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtAgelt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt33 years oldlt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtEmaillt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gtlfitzgerald@emforium.comlt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtStatuslt-x-lt/tdgt-x-gt
+   lt-x-lttd colspan=&quot;3&quot; class=&quot;basic-info-content&quot;gt-x-gtEnabledlt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+ lt-x-lt/tablegt-x-gt
+lt-x-lt/divgt-x-gtlt-x-lt/divgt-x-gtlt-x-lt/formgt-x-gt
+
+
+        lt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gt
+        lt-x-lt/tablegt-x-gt
+        lt-x-lt/divgt-x-gt
+    lt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gt
+lt-x-lt/tablegt-x-gt
+
+
+lt-x-lt/divgt-x-gt"> </span><span id="hc-party-10047" value="lt-x-ltdiv class=&quot;modal-screenlet&quot;gt-x-gt
+
+
+
+lt-x-lttable class=&quot;zimlet-table&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; width=&quot;100%&quot;gt-x-gt
+    lt-x-lttrgt-x-gtlt-x-lttd align=&quot;center&quot;gt-x-gt
+        lt-x-lth3 class=&quot;title&quot;gt-x-gtCustomer Detailslt-x-lt/h3gt-x-gt
+    lt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gt
+    lt-x-lttr valign=&quot;center&quot;gt-x-gtlt-x-lttd align=&quot;left&quot;gt-x-gt
+        lt-x-ltdiv style=&quot;border-top: 1px solid black; border-bottom: 1px solid black; white-space:nowrap;&quot;gt-x-gt
+        lt-x-lttable class=&quot;zimlet-table&quot; cellpadding=&quot;3&quot; cellspacing=&quot;3&quot; border=&quot;0&quot; width=&quot;100%&quot;gt-x-gt
+        lt-x-lttrgt-x-gtlt-x-lttdgt-x-gt
+            
+lt-x-ltform method=&quot;post&quot;  action=&quot;&quot;  id=&quot;ViewParty&quot; class=&quot;basic-form&quot; onSubmit=&quot;javascript:return submitFormDisableSubmits(this)&quot; name=&quot;ViewParty&quot;gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;nameDisplay&quot; value=&quot;Mr Greg Buzbuzian&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;customerId&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;primaryPhoneDisplay&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;birthDate&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;primaryAddressDisplay&quot; value=&quot;56 St. George's Square&amp;lt;br/&amp;gt;Guelph, ON&amp;lt;br/&amp;gt;CAN N1H 4E6&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;age2&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;primaryEmailDisplay&quot; value=&quot;greg.b@knar.com&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;status&quot;/gt-x-gt
+lt-x-ltdiv class=&quot;fieldgroup&quot; id=&quot;_G370_&quot;gt-x-gtlt-x-ltdiv class=&quot;fieldgroup-title-bar&quot;gt-x-gtlt-x-lttablegt-x-gtlt-x-lttrgt-x-gtlt-x-lttd class=&quot;collapse&quot;gt-x-gtlt-x-lt/tdgt-x-gtlt-x-lttdgt-x-gtlt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gtlt-x-lt/tablegt-x-gtlt-x-lt/divgt-x-gtlt-x-ltdiv id=&quot;_G370__body&quot; class=&quot;fieldgroup-body&quot;gt-x-gt lt-x-lttable cellspacing=&quot;0&quot; class=&quot;basic-table&quot;gt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtNamelt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gtMr Greg Buzbuzianlt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtCustomer Idlt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt10047lt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtPhonelt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt&amp;nbsp;lt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtBirth Datelt-x-lt/tdgt-x-gt
+   lt-x-lttd colspan=&quot;3&quot; class=&quot;basic-info-content&quot;gt-x-gt&amp;nbsp;lt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtAddresslt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt56 St. George's Squarelt-x-ltbr/gt-x-gtGuelph, ONlt-x-ltbr/gt-x-gtCAN N1H 4E6lt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtAgelt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt&amp;nbsp;lt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtEmaillt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gtgreg.b@knar.comlt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtStatuslt-x-lt/tdgt-x-gt
+   lt-x-lttd colspan=&quot;3&quot; class=&quot;basic-info-content&quot;gt-x-gtEnabledlt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+ lt-x-lt/tablegt-x-gt
+lt-x-lt/divgt-x-gtlt-x-lt/divgt-x-gtlt-x-lt/formgt-x-gt
+
+
+        lt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gt
+        lt-x-lt/tablegt-x-gt
+        lt-x-lt/divgt-x-gt
+    lt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gt
+lt-x-lt/tablegt-x-gt
+
+
+lt-x-lt/divgt-x-gt"> </span><span id="hc-party-10140" value="lt-x-ltdiv class=&quot;modal-screenlet&quot;gt-x-gt
+
+
+
+lt-x-lttable class=&quot;zimlet-table&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; width=&quot;100%&quot;gt-x-gt
+    lt-x-lttrgt-x-gtlt-x-lttd align=&quot;center&quot;gt-x-gt
+        lt-x-lth3 class=&quot;title&quot;gt-x-gtCustomer Detailslt-x-lt/h3gt-x-gt
+    lt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gt
+    lt-x-lttr valign=&quot;center&quot;gt-x-gtlt-x-lttd align=&quot;left&quot;gt-x-gt
+        lt-x-ltdiv style=&quot;border-top: 1px solid black; border-bottom: 1px solid black; white-space:nowrap;&quot;gt-x-gt
+        lt-x-lttable class=&quot;zimlet-table&quot; cellpadding=&quot;3&quot; cellspacing=&quot;3&quot; border=&quot;0&quot; width=&quot;100%&quot;gt-x-gt
+        lt-x-lttrgt-x-gtlt-x-lttdgt-x-gt
+            
+lt-x-ltform method=&quot;post&quot;  action=&quot;&quot;  id=&quot;ViewParty&quot; class=&quot;basic-form&quot; onSubmit=&quot;javascript:return submitFormDisableSubmits(this)&quot; name=&quot;ViewParty&quot;gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;nameDisplay&quot; value=&quot;Test Andrei&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;customerId&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;primaryPhoneDisplay&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;birthDate&quot; value=&quot;1788-11-27&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;primaryAddressDisplay&quot; value=&quot;AB&amp;lt;br/&amp;gt;CAN&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;age&quot; value=&quot;220&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;primaryEmailDisplay&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;status&quot;/gt-x-gt
+lt-x-ltdiv class=&quot;fieldgroup&quot; id=&quot;_G370_&quot;gt-x-gtlt-x-ltdiv class=&quot;fieldgroup-title-bar&quot;gt-x-gtlt-x-lttablegt-x-gtlt-x-lttrgt-x-gtlt-x-lttd class=&quot;collapse&quot;gt-x-gtlt-x-lt/tdgt-x-gtlt-x-lttdgt-x-gtlt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gtlt-x-lt/tablegt-x-gtlt-x-lt/divgt-x-gtlt-x-ltdiv id=&quot;_G370__body&quot; class=&quot;fieldgroup-body&quot;gt-x-gt lt-x-lttable cellspacing=&quot;0&quot; class=&quot;basic-table&quot;gt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtNamelt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gtTest Andreilt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtCustomer Idlt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt10140lt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtPhonelt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt&amp;nbsp;lt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtBirth Datelt-x-lt/tdgt-x-gt
+   lt-x-lttd colspan=&quot;3&quot; class=&quot;basic-info-content&quot;gt-x-gt1788-11-27lt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtAddresslt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gtABlt-x-ltbr/gt-x-gtCANlt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtAgelt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt220 years oldlt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtEmaillt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt&amp;nbsp;lt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtStatuslt-x-lt/tdgt-x-gt
+   lt-x-lttd colspan=&quot;3&quot; class=&quot;basic-info-content&quot;gt-x-gtEnabledlt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+ lt-x-lt/tablegt-x-gt
+lt-x-lt/divgt-x-gtlt-x-lt/divgt-x-gtlt-x-lt/formgt-x-gt
+
+
+        lt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gt
+        lt-x-lt/tablegt-x-gt
+        lt-x-lt/divgt-x-gt
+    lt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gt
+lt-x-lt/tablegt-x-gt
+
+
+lt-x-lt/divgt-x-gt"> </span><span id="hc-party-10038" value="lt-x-ltdiv class=&quot;modal-screenlet&quot;gt-x-gt
+
+
+
+lt-x-lttable class=&quot;zimlet-table&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; width=&quot;100%&quot;gt-x-gt
+    lt-x-lttrgt-x-gtlt-x-lttd align=&quot;center&quot;gt-x-gt
+        lt-x-lth3 class=&quot;title&quot;gt-x-gtCustomer Detailslt-x-lt/h3gt-x-gt
+    lt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gt
+    lt-x-lttr valign=&quot;center&quot;gt-x-gtlt-x-lttd align=&quot;left&quot;gt-x-gt
+        lt-x-ltdiv style=&quot;border-top: 1px solid black; border-bottom: 1px solid black; white-space:nowrap;&quot;gt-x-gt
+        lt-x-lttable class=&quot;zimlet-table&quot; cellpadding=&quot;3&quot; cellspacing=&quot;3&quot; border=&quot;0&quot; width=&quot;100%&quot;gt-x-gt
+        lt-x-lttrgt-x-gtlt-x-lttdgt-x-gt
+            
+lt-x-ltform method=&quot;post&quot;  action=&quot;&quot;  id=&quot;ViewParty&quot; class=&quot;basic-form&quot; onSubmit=&quot;javascript:return submitFormDisableSubmits(this)&quot; name=&quot;ViewParty&quot;gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;nameDisplay&quot; value=&quot;Mr Jeff Buzbuzian&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;customerId&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;primaryPhoneDisplay&quot; value=&quot;1 (519) 221-9200&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;birthDate&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;primaryAddressDisplay&quot; value=&quot;56 St. George's Square&amp;lt;br/&amp;gt;Guelph, ON&amp;lt;br/&amp;gt;CAN N1H 4E6&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;age2&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;primaryEmailDisplay&quot; value=&quot;jbuzbuzian@telus.blackberry.net&quot;/gt-x-gt
+lt-x-ltinput type=&quot;hidden&quot; name=&quot;status&quot;/gt-x-gt
+lt-x-ltdiv class=&quot;fieldgroup&quot; id=&quot;_G345_&quot;gt-x-gtlt-x-ltdiv class=&quot;fieldgroup-title-bar&quot;gt-x-gtlt-x-lttablegt-x-gtlt-x-lttrgt-x-gtlt-x-lttd class=&quot;collapse&quot;gt-x-gtlt-x-lt/tdgt-x-gtlt-x-lttdgt-x-gtlt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gtlt-x-lt/tablegt-x-gtlt-x-lt/divgt-x-gtlt-x-ltdiv id=&quot;_G345__body&quot; class=&quot;fieldgroup-body&quot;gt-x-gt lt-x-lttable cellspacing=&quot;0&quot; class=&quot;basic-table&quot;gt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtNamelt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gtMr Jeff Buzbuzianlt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtCustomer Idlt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt10038lt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtPhonelt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt1 (519) 221-9200lt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtBirth Datelt-x-lt/tdgt-x-gt
+   lt-x-lttd colspan=&quot;3&quot; class=&quot;basic-info-content&quot;gt-x-gt&amp;nbsp;lt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtAddresslt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt56 St. George's Squarelt-x-ltbr/gt-x-gtGuelph, ONlt-x-ltbr/gt-x-gtCAN N1H 4E6lt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtAgelt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gt&amp;nbsp;lt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+  lt-x-lttrgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtEmaillt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;basic-info-content&quot;gt-x-gtjbuzbuzian@telus.blackberry.netlt-x-lt/tdgt-x-gt
+   lt-x-lttd class=&quot;label label100&quot;gt-x-gtStatuslt-x-lt/tdgt-x-gt
+   lt-x-lttd colspan=&quot;3&quot; class=&quot;basic-info-content&quot;gt-x-gtEnabledlt-x-lt/tdgt-x-gt
+  lt-x-lt/trgt-x-gt
+ lt-x-lt/tablegt-x-gt
+lt-x-lt/divgt-x-gtlt-x-lt/divgt-x-gtlt-x-lt/formgt-x-gt
+
+
+        lt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gt
+        lt-x-lt/tablegt-x-gt
+        lt-x-lt/divgt-x-gt
+    lt-x-lt/tdgt-x-gtlt-x-lt/trgt-x-gt
+lt-x-lt/tablegt-x-gt
+
+
+lt-x-lt/divgt-x-gt"> </span></hovercache>
+
+<!--<div id="gwtfieldids" list="gwl13,gwl14,gwl15,f6,f5"></div>-->
+<!--<div id="gwtnodeids" list="gw16,gw17"></div>-->
